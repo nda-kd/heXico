@@ -4,6 +4,7 @@ import { Avatar } from '@material-ui/core'
 import { styled } from '@material-ui/core/styles'
 import CallSharpIcon from '@material-ui/icons/CallSharp';
 import VideocamIcon from '@material-ui/icons/Videocam';
+import InfoIcon from '@material-ui/icons/Info';
 
 
 class ContactProfile extends Component {
@@ -30,47 +31,12 @@ class ContactProfile extends Component {
           <label>
             <p>about</p>
           </label>
+          <div className='contact-profile-menu-wrap'>
+            <CallSharpIcon style={{fontSize: '35', color: '#0ac5e6f1'}} />
+            <InfoIcon style={{fontSize: '35', color: '#0ac5e6f1'}} />
+            <VideocamIcon style={{fontSize: '35', color: '#0ac5e6f1'}} />
+          </div>
          </div>
-         <div className='contacts-profile-call-info'>
-            <div>
-              <p>Last Login:</p>
-              <p className='p-color'>dgdg</p>
-            </div>
-            <hr />
-            <div>
-              <p>Emaile:</p>
-              <p className='p-color'>dfgdfggdgdfgdfgdfg</p>
-            </div>
-            <hr />
-            <div>
-            <p>Location:</p>
-            <p className='p-color'>sdgdg</p>
-            </div>
-          </div>
-          <div className='calls-wrap'>
-            <CallSharpIcon 
-            style=
-            {{fontSize: '50', color: '#eee',
-             backgroundColor: '#fff',
-              borderRadius: '50%',
-              width: '50',
-              height: '50',
-              padding: '5',
-              border: '1px solid #0ac5e6f1'
-              }} 
-              />
-            <VideocamIcon 
-            style=
-            {{fontSize: '50', color: '#eee',
-             backgroundColor: '#fff',
-              borderRadius: '50%',
-              width: '50',
-              height: '50',
-              padding: '5',
-              border: '1px solid #0ac5e6f1'
-              }}
-             />
-          </div>
       </div>
     )
   }
