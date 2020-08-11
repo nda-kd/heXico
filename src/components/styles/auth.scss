@@ -1,4 +1,102 @@
+@import "./generalUse.scss";
+@font-face{
+  font-family: 'Baloo Tamma 2';
+  src: local('Baloo Tamma 2'), url(./Fonts/BalooTamma2-Regular.ttf) format('truetype')
+}
 
+.login-page-wrap{
+    @extend %flex-display;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'Baloo Tamma 2';
+    font-style: normal;
+}
 
+.signup-wrap{
+    @extend %flex-display;
+    flex-direction: column ; 
+    justify-content: center ;
+    flex-grow: 1;
+    height: 100vh ;
+    position: relative;
+    background-color: $primary-blue;
+}
 
-    
+.signup-part{
+    @extend %flex-display;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 10% 0 0 10% ;
+    position: absolute;
+    height: 47em ;
+    right: 0;
+    left: 20em;
+    background-color: $grey;
+}
+
+.login-wrap{
+    @extend %flex-display;
+    flex-direction: column ; 
+    justify-content: center ;
+    flex-grow: 1;
+    height: 100vh ;   
+    position: relative;
+    background-color: $grey;
+}
+
+.login-part{
+    @extend %flex-display;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius:0 10% 10% 0;
+    position: absolute;
+    height: 47em ;
+    right: 20em;
+    left: 0;
+    background-color: $white;
+}
+
+.login-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3em 4.5em;
+
+} 
+
+.login-title-wrap{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    h1{
+        margin: 0em;
+        margin-bottom: 0;
+    }
+    p{
+        font-size: .95em;
+        margin: 0em;
+        color: $darker-grey;
+     }   
+}
+
+.input-wrap{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 20vh;
+
+}
+
+.input-error{
+    margin-top: 1em;
+    input{
+      height: .8em;
+      width: 17em;
+    }
+    p{
+        color: red;
+        font-size: 2em;
+    }
+}
