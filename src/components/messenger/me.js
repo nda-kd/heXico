@@ -6,7 +6,6 @@ import settingIcon from '../../images/setting.png'
 
 class Me extends React.Component {
   render () {
-
     const MyAvatar = styled(Avatar)({
       backgroundColor: '#0ac5e6f1',
       color: 'white',
@@ -26,7 +25,7 @@ class Me extends React.Component {
             <label>
               <p>About me </p>
             </label>
-            
+
           </div>
         </div>
         <img src={settingIcon} alt='Setting Icon' />

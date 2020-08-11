@@ -4,7 +4,6 @@ import AttachmentIcon from '@material-ui/icons/Attachment'
 import sendButton from '../../images/SEND.svg'
 import Emoji from '../Additional/Emoji'
 
-
 class SendMessage extends Component {
   render () {
     return (

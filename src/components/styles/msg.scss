@@ -19,7 +19,7 @@ body{
 .contacts-me-search-wraps{
     @extend %flex-display;
     flex-direction: column;
-    flex-grow: .2;
+    flex-grow: .3;
     background-color: $grey;
 }
   
@@ -169,10 +169,7 @@ body{
     background-color: $white;
 }
   
-input:focus{
-  outline: none;
 
-}
 
   .send-wrap{
     @extend %flex-display;
@@ -187,6 +184,9 @@ input:focus{
       padding: 0em .3em;
       border: 0em ;
       font-family: 'Baloo Tamma 2';
+      &:focus{
+        outline: none;
+      }
     }
     //send image
     img{
@@ -236,7 +236,7 @@ input:focus{
     @extend %flex-display;
     flex-direction: column;
     align-items: center;
-    flex-grow: .65;
+    flex-grow: .6;
     background-color: $grey;
   }
 
@@ -244,11 +244,11 @@ input:focus{
   .contacts-profile{
     @extend %flex-display;
     flex-direction: column;
-    width: 17em;
+    width: 16.5em;
     height: 22em;
     border-radius: 5px;
-    margin: 2em 0.5em 0em 1.33em ;
-    padding: 2em 2em 1em 2em;
+    margin: 5em 0.5em 0em .5em ;
+    padding: 1em 2em 1em 2em;
     background-color: $white;
     //about label
     label{
@@ -280,5 +280,6 @@ input:focus{
 hr{
   border: 1px solid $grey;
   width: 16em;
+  align-self: center;
   margin-top: .5em;
 }    
