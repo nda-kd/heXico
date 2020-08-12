@@ -4,6 +4,10 @@
   src: local('Baloo Tamma 2'), url(./Fonts/BalooTamma2-Regular.ttf) format('truetype')
 }
 
+/*------------------------------------
+    Login                       
+------------------------------------*/ 
+
 .login-page-wrap{
     @extend %flex-display;
     margin: 0;
@@ -13,7 +17,7 @@
     font-style: normal;
 }
 
-.signup-wrap{
+.login-signup-wrap{
     @extend %flex-display;
     flex-direction: column ; 
     justify-content: center ;
@@ -23,7 +27,7 @@
     background-color: $primary-blue;
 }
 
-.signup-part{
+.login-signup-part{
     @extend %flex-display;
     flex-direction: column;
     flex-grow: 1;
@@ -33,9 +37,16 @@
     right: 0;
     left: 20em;
     background-color: $grey;
+    div{
+        align-self: flex-start;
+        margin: 5em 4.5em;
+    }
+    img{
+        justify-self: center;
+    }
 }
 
-.login-wrap{
+.login-login-wrap{
     @extend %flex-display;
     flex-direction: column ; 
     justify-content: center ;
@@ -45,7 +56,7 @@
     background-color: $grey;
 }
 
-.login-part{
+.login-login-part{
     @extend %flex-display;
     flex-direction: column;
     flex-grow: 1;
@@ -60,21 +71,27 @@
 .login-contents{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin: 3em 4.5em;
-
+    justify-content: space-between;
+    height: 35em;
+    margin: 5em 4.5em;
+    a{
+        text-align: left;
+        text-decoration: none;
+    }
 } 
 
 .login-title-wrap{
     display: flex;
     flex-direction: column;
     text-align: left;
+    margin-bottom: 1em;
     h1{
+        font-size: 2.3em;
         margin: 0em;
-        margin-bottom: 0;
+        height: 1.3em;
     }
     p{
-        font-size: .95em;
+        font-size: 1em;
         margin: 0em;
         color: $darker-grey;
      }   
@@ -83,20 +100,116 @@
 .input-wrap{
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   align-items: center;
+   align-items: flex-start;
    height: 20vh;
-
 }
 
 .input-error{
-    margin-top: 1em;
+    margin: 1em 0em .5em 0em;
     input{
+      text-align: left;
       height: .8em;
-      width: 17em;
-    }
-    p{
-        color: red;
-        font-size: 2em;
+      width: 19em;
     }
 }
+
+.login-submit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 4em;
+}
+
+/*------------------------------------
+    Sign Up
+------------------------------------*/ 
+
+.signup-page-wrap{
+    @extend %flex-display;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'Baloo Tamma 2';
+    font-style: normal;
+}
+
+.signup-signup-wrap{
+    @extend %flex-display;
+    flex-direction: column ; 
+    justify-content: center ;
+    flex-grow: 1;
+    height: 100vh ;
+    position: relative;
+    background-color: $grey;
+}
+
+.signup-signup-part{
+    @extend %flex-display;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 10% 0 0 10% ;
+    position: absolute;
+    height: 47em ;
+    right: 0;
+    left: 20em;
+    background-color: $white;
+}
+
+.signup-login-wrap{
+    @extend %flex-display;
+    flex-direction: column ; 
+    justify-content: center ;
+    flex-grow: 1;
+    height: 100vh ;   
+    position: relative;
+    background-color: $primary-blue;
+}
+
+.signup-login-part{
+    @extend %flex-display;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius:0 10% 10% 0;
+    position: absolute;
+    height: 47em ;
+    right: 20em;
+    left: 0;
+    background-color: $grey;
+    div{
+        align-self: flex-start;
+        margin: 5em 4.5em;
+    }
+    img{
+        justify-self: center;
+    }
+}
+
+.signup-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3em 4.5em;
+}
+
+.signup-title-wrap{
+    display: inline-block;
+    text-align: left;
+    h1{
+        font-size: 2.3em;
+        margin: 0em;
+        height: 1.3em;
+    }
+    p{
+        font-size: 1em;
+        margin: 0em;
+        color: $darker-grey;
+     }  
+}
+
+
+
+
+
+/*------------------------------------
+    My Profile
+------------------------------------*/ 
