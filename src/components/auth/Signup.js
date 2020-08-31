@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import signupImage from '../../images/Signup-image.svg'
@@ -27,12 +28,12 @@ class Signup extends Component {
                 <TextField className='email-input' variant='outlined' label='Email' />
               </div>
               <div className='signup-submit'>
-                <p>By clicking Sign up, you agree to abide by <a href='www.'>heXico's Terms and Conditions.</a> </p>
+                <p>By clicking Sign up, you agree to abide by <Link to='www.'>heXico's Terms and Conditions.</Link> </p>
                 <Button
                   variant='contained' size='large'
                   style={{ backgroundColor: '#0ac5e6f1' }}
                 >
-                                    sign up
+                    sign up
                 </Button>
               </div>
             </div>
@@ -43,6 +44,7 @@ class Signup extends Component {
             <div>
               <span>Already a member? </span>
               <Button
+                onClick = {()=>this.props.history.push('/')}
                 variant='outlined' size='large'
                 style={{
                   border: '.15em solid #0ac5e6f1',
@@ -50,7 +52,7 @@ class Signup extends Component {
                   marginLeft: '.5em'
                 }}
               >
-                                Login
+                    Login
               </Button>
             </div>
             <img alt='' src={signupImage} />
@@ -61,4 +63,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup
+export default Signup;

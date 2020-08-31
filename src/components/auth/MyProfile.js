@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
 import { Avatar } from '@material-ui/core'
-import Badge from '@material-ui/core/Badge';
-import PhotoCamera from '@material-ui/icons/PhotoCamera';
-import IconButton from '@material-ui/core/IconButton';
-import PersonIcon from '@material-ui/icons/Person';
 import { styled } from '@material-ui/core/styles'
 import '../styles/auth.scss'
 import TextField from '@material-ui/core/TextField'
@@ -15,6 +11,10 @@ import CallEndSharpIcon from '@material-ui/icons/CallEndSharp';
 import VpnKeySharpIcon from '@material-ui/icons/VpnKeySharp';
 import EmailSharpIcon from '@material-ui/icons/EmailSharp';
 import InfoSharpIcon from '@material-ui/icons/InfoSharp';
+import Badge from '@material-ui/core/Badge';
+import PhotoCamera from '@material-ui/icons/PhotoCamera';
+import IconButton from '@material-ui/core/IconButton';
+import PersonIcon from '@material-ui/icons/Person';
 
 class Profile extends Component {
   render () {

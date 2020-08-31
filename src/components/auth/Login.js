@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import loginImage from '../../images/Login-image.svg'
@@ -13,6 +14,7 @@ class Login extends Component {
             <div>
               <span>Create an account</span>
               <Button
+              onClick = {()=>this.props.history.push('/Signup')}
                 variant='outlined' size='large'
                 style={{
                   border: '.15em solid #0ac5e6f1',
@@ -20,10 +22,10 @@ class Login extends Component {
                   marginLeft: '.5em'
                 }}
               >
-                                sign up
+                sign up
               </Button>
             </div>
-            <img src={loginImage} />
+            <img src={loginImage} alt='' />
           </div>
         </div>
         <div className='login-login-wrap'>
@@ -50,10 +52,10 @@ class Login extends Component {
                   variant='contained' size='large'
                   style={{ backgroundColor: '#0ac5e6f1' }}
                 >
-                                    Login
+                    Login
                 </Button>
               </div>
-              <a href='http://localhost:3000/Signup#'>Forgot your password?</a>
+              <Link to='/'>Forgot your password?</Link>
             </div>
           </div>
         </div>

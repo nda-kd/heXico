@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 import { Avatar } from '@material-ui/core'
 import { styled } from '@material-ui/core/styles'
 import '../styles/msg.scss'
@@ -28,9 +29,11 @@ class Me extends React.Component {
 
           </div>
         </div>
-        <img src={settingIcon} alt='Setting Icon' />
+        <img 
+        onClick = {()=>this.props.history.push('/profile')}
+        src={settingIcon} alt='Setting Icon' />
       </div>
     )
   }
 }
-export default Me
+export default withRouter(Me);
