@@ -19,7 +19,6 @@ class SendMessage extends Component {
           </label>
         </div>
         <img className='send-img' src={sendButton} alt='Send Button' />
-        {/* <SendIcon className='send-img' style={{ fontSize: 38 }} /> */}
       </div>
     )
   }

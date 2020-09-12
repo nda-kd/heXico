@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
+import '../styles/auth.scss'
+import { withRouter } from 'react-router-dom'
 import { Avatar } from '@material-ui/core'
 import { styled } from '@material-ui/core/styles'
-import '../styles/auth.scss'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import SaveIcon from '@material-ui/icons/Save';
 import CancelIcon from '@material-ui/icons/Cancel';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import CallEndSharpIcon from '@material-ui/icons/CallEndSharp';
 import VpnKeySharpIcon from '@material-ui/icons/VpnKeySharp';
 import EmailSharpIcon from '@material-ui/icons/EmailSharp';
@@ -15,6 +15,9 @@ import Badge from '@material-ui/core/Badge';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
 import IconButton from '@material-ui/core/IconButton';
 import PersonIcon from '@material-ui/icons/Person';
+import Grid from '@material-ui/core/Grid';
+
+
 
 class Profile extends Component {
   render () {
@@ -66,42 +69,46 @@ class Profile extends Component {
 
           <div className='info-changes'>
             <div className='forms'>
-              <TextField id='outlined-basic' label='Email'
-              InputProps={{
-              startAdornment: (
-                <InputAdornment position="end">
-                  <EmailSharpIcon />
-                </InputAdornment>
-              ),
-              }}  
-              />              
-              <TextField id='outlined-basic' label='Number'  
-                InputProps={{
-              startAdornment: (
-                <InputAdornment position="end">
-                  <CallEndSharpIcon />
-                </InputAdornment>
-              ),
-              }}
-              /> 
-              <TextField id='outlined-basic' label='Password' 
-                InputProps={{
-              startAdornment: (
-                <InputAdornment position="end">
-                  <VpnKeySharpIcon />
-                </InputAdornment>
-              ),
-              }}
-              />
-              <TextField id='outlined-basic' label='about'
-              InputProps={{
-              startAdornment: (
-                <InputAdornment position="end">
-                  <InfoSharpIcon />
-                </InputAdornment>
-              ),
-              }}
-               />
+              <div className='profile-input-wrap'>
+                  <Grid container spacing={2} alignItems="flex-end">
+                    <Grid item>
+                      <EmailSharpIcon />
+                    </Grid>
+                    <Grid item>
+                      <TextField id="input-with-icon-grid" label="Email" />
+                    </Grid>
+                  </Grid>
+              </div>
+              <div className='profile-input-wrap'>
+                <Grid container spacing={2} alignItems="flex-end">
+                  <Grid item>
+                    <CallEndSharpIcon />
+                  </Grid>
+                  <Grid item>
+                    <TextField id="input-with-icon-grid" label="Number" />
+                  </Grid>
+                </Grid>
+              </div>
+              <div className='profile-input-wrap'>
+                <Grid container spacing={2} alignItems="flex-end">
+                  <Grid item>
+                    <VpnKeySharpIcon />
+                  </Grid>
+                  <Grid item>
+                    <TextField type='password' id="input-with-icon-grid" label="Password" />
+                  </Grid>
+                </Grid>
+              </div>
+              <div className='profile-input-wrap'>
+                <Grid container spacing={2} alignItems="flex-end">
+                  <Grid item>
+                    <InfoSharpIcon />
+                  </Grid>
+                  <Grid item>
+                    <TextField id="input-with-icon-grid" label="About" />
+                  </Grid>
+                </Grid>
+              </div>
             </div>
             <div className='buttons-wrap'>
               <Button
@@ -119,6 +126,7 @@ class Profile extends Component {
               size="large"
               startIcon={<CancelIcon />}
               style={{fontSize:'.8em', backgroundColor: '#0ac5e6f1' }}
+              onClick={()=> this.props.history.push('./Messenger')}
               >
                 Cancel
               </Button>
@@ -132,4 +140,4 @@ class Profile extends Component {
   }
 }
 
-export default Profile
+export default withRouter(Profile)

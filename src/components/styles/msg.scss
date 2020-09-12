@@ -42,6 +42,15 @@ body{
     }
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
+// .setting-button{
+//   display: none;
+// }
+
 .myIntroduce{
   display: flex;
   flex-direction: column;
@@ -200,6 +209,8 @@ body{
 
 
   .emoji-wrap{
+    display: flex;
+    justify-content: center;
     flex-grow: .16;
     align-content: center;
     height: 2.3em;
