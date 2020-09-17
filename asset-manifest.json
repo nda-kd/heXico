@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/heXico/static/css/main.77240a12.chunk.css",
+    "main.js": "/heXico/static/js/main.493d1df9.chunk.js",
+    "main.js.map": "/heXico/static/js/main.493d1df9.chunk.js.map",
+    "runtime-main.js": "/heXico/static/js/runtime-main.748dda43.js",
+    "runtime-main.js.map": "/heXico/static/js/runtime-main.748dda43.js.map",
+    "static/js/2.97151931.chunk.js": "/heXico/static/js/2.97151931.chunk.js",
+    "static/js/2.97151931.chunk.js.map": "/heXico/static/js/2.97151931.chunk.js.map",
+    "index.html": "/heXico/index.html",
+    "precache-manifest.f1afe42bbaa3861e0ba5ae72618f1968.js": "/heXico/precache-manifest.f1afe42bbaa3861e0ba5ae72618f1968.js",
+    "service-worker.js": "/heXico/service-worker.js",
+    "static/css/main.77240a12.chunk.css.map": "/heXico/static/css/main.77240a12.chunk.css.map",
+    "static/js/2.97151931.chunk.js.LICENSE.txt": "/heXico/static/js/2.97151931.chunk.js.LICENSE.txt",
+    "static/media/auth.scss": "/heXico/static/media/BalooTamma2-Regular.05aa77b1.ttf",
+    "static/media/Login-image.svg": "/heXico/static/media/Login-image.8d11f737.svg",
+    "static/media/SEND.svg": "/heXico/static/media/SEND.13323f72.svg",
+    "static/media/Signup-image.svg": "/heXico/static/media/Signup-image.a383d3db.svg",
+    "static/media/setting.png": "/heXico/static/media/setting.89bcbe4a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.748dda43.js",
+    "static/js/2.97151931.chunk.js",
+    "static/css/main.77240a12.chunk.css",
+    "static/js/main.493d1df9.chunk.js"
+  ]
+}
