@@ -126,7 +126,7 @@ class Profile extends Component {
               size="large"
               startIcon={<CancelIcon />}
               style={{fontSize:'.8em', backgroundColor: '#0ac5e6f1' }}
-              onClick={()=> this.props.history.push('./heXico/Messenger')}
+              onClick={()=> this.props.history.push('/heXico/Messenger')}
               >
                 Cancel
               </Button>
