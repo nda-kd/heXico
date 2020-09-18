@@ -12,10 +12,13 @@ function App () {
       <Switch>
         <Route exact path='/heXico' component={Login} />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Route path='/heXico/Signup' component={Signup} />
         <Route path='/heXico/messenger' component={Messenger} />
         <Route path='/heXico/profile' component={Profile} />
 =======
+=======
+>>>>>>> f812c8fdfcb8639f918b91e4fa9b48aae423afe2
         <Route path='/Signup' component={Signup} />
         <Route path='/heXico/messenger' component={Messenger} />
         <Route path='/profile' component={Profile} />
