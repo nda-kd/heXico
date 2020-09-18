@@ -104,7 +104,7 @@ class Me extends React.Component {
           open={Boolean(this.state.anchorEl)}
           onClose={this.handleClose}
           >
-          <Link to='./Profile'>
+          <Link to='/Profile'>
           <StyledMenuItem>
               <ListItemIcon>
                 <FaceSharpIcon fontSize="small" />
