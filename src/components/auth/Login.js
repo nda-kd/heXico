@@ -14,7 +14,7 @@ class Login extends Component {
             <div>
               <span>Create an account</span>
               <Button
-              onClick = {()=>this.props.history.push('/Signup')}
+                onClick={() => this.props.history.push('/Signup')}
                 variant='outlined' size='large'
                 style={{
                   border: '.15em solid #0ac5e6f1',

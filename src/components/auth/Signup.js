@@ -12,11 +12,11 @@ class Signup extends Component {
         <div className='signup-signup-wrap'>
           <div className='signup-signup-part'>
             <div className='signup-contents'>
-              <div class='signup-title-wrap'>
+              <div className='signup-title-wrap'>
                 <h1>Sign up</h1>
                 <p>Create an account in heXico to chat with friends</p>
               </div>
-              <div class='signup-input-wrap'>
+              <div className='signup-input-wrap'>
                 <div className='two-input-wrap'>
                   <TextField variant='outlined' label='User Name' />
                   <TextField variant='outlined' label='Number' />
@@ -44,7 +44,7 @@ class Signup extends Component {
             <div>
               <span>Already a member? </span>
               <Button
-                onClick = {()=>this.props.history.push('/heXico')}
+                onClick={() => this.props.history.push('/')}
                 variant='outlined' size='large'
                 style={{
                   border: '.15em solid #0ac5e6f1',
@@ -63,4 +63,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default Signup
