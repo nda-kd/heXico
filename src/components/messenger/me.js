@@ -41,7 +41,7 @@ class Me extends React.Component {
       fontFamily: 'sans-serif',
       width: '4.8vw',
       height: '9.8vh',
-      margin: '0.5em 0em 0em 1em'
+      margin: '0.5em 0em 0em 1em'  
     })
 
     const StyledMenu = withStyles({
@@ -68,6 +68,7 @@ class Me extends React.Component {
     
     const StyledMenuItem = withStyles((theme) => ({
       root: {
+       
         '&:hover': {
           backgroundColor: '#0ac5e6f1',
           '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
@@ -104,7 +105,8 @@ class Me extends React.Component {
           open={Boolean(this.state.anchorEl)}
           onClose={this.handleClose}
           >
-          <Link to='/Profile'>
+          <Link to='/Profile' style={{ textDecoration: 'none',
+              color: 'black'}}>
           <StyledMenuItem>
               <ListItemIcon>
                 <FaceSharpIcon fontSize="small" />

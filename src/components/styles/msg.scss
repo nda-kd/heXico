@@ -29,7 +29,7 @@ body{
     justify-content: space-between;
     flex-grow: 0.2;
     margin: 0em;
-    padding: 0em;
+    padding: 0em; 
     div{
       display: flex;
     }
@@ -39,13 +39,14 @@ body{
       margin: 3.6em 3.8em 0em 0em;
       width: 1.2em;
       height: 1.2em;
+      a{
+        text-decoration: none;
+        color: black;
+    }
     }
 }
 
-a{
-  text-decoration: none;
-  color: black;
-}
+
 
 // .setting-button{
 //   display: none;
@@ -95,6 +96,9 @@ a{
       height: 2.4em;
       margin: 0.6em 3.3em 0em 0em;
       margin-right: 0rem;
+      &:focus{
+        outline: none;
+    }
     }
 }
   
@@ -173,8 +177,11 @@ a{
 
 
 .chat-box{
+    overflow: scroll;
+    box-sizing: border-box;
+    padding: 2em;
     flex-grow: 2;
-    flex-wrap: wrap;
+    height: 100px ;
     background-color: $white;
 }
   
@@ -293,4 +300,20 @@ hr{
   width: 16em;
   align-self: center;
   margin-top: .5em;
-}    
+}  
+
+// my conversation box 
+
+.my-chat-wrap{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.myChat{
+  @extend %flex-display;
+  box-sizing: border-box;
+  padding: 0em .5em;
+  border-radius: 1em 0em 1em 1em;
+  margin-bottom: 1em ;
+  background-color: $primary-blue;
+}

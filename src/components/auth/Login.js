@@ -55,7 +55,7 @@ class Login extends Component {
                     Login
                 </Button>
               </div>
-              <Link to='/'>Forgot your password?</Link>
+              <Link to='/messenger' style={{ textDecoration: 'underline' }}>Forgot your password?</Link>
             </div>
           </div>
         </div>
