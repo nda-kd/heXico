@@ -45,8 +45,9 @@ class Login extends Component {
               </div>
               <div className='login-submit'>
                 <span>
-                  <input type='checkbox' id='login' name='login' />
-                  <label for='login'>Remember me</label>
+                  <label>
+                    <input type='checkbox' id='login' name='login' /> Remember me
+                  </label>
                 </span>
                 <Button
                   variant='contained' size='large'
@@ -55,7 +56,7 @@ class Login extends Component {
                     Login
                 </Button>
               </div>
-              <Link to='/messenger' style={{ textDecoration: 'underline' }}>Forgot your password?</Link>
+              <Link to='/' style={{ textDecoration: 'underline' }}>Forgot your password?</Link>
             </div>
           </div>
         </div>

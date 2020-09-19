@@ -8,8 +8,8 @@ class ChatPage extends Component {
       <div className='chat-box'>
         {this.props.messageList.map((message, index) => {
           return (
-            <div className='my-chat-wrap'>
-              <div className='myChat' key={index}>
+            <div className='my-chat-wrap' key={index}>
+              <div className='myChat'>
                 <p>{message.text}</p>
               </div>
             </div>)

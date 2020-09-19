@@ -15,9 +15,8 @@ class SendMessage extends Component {
   }
 
   changeHandle (e) {
-      this.setState({ newMessage: e.target.value })
-      console.log(e)
-    
+    this.setState({ newMessage: e.target.value })
+    console.log(e)
   }
 
   sendMessage () {

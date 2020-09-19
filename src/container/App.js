@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, HashRouter as Router } from 'react-router-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import Messenger from '../components/messenger/messenger'
@@ -14,14 +14,14 @@ const store = createStore(conversation)
 function App () {
   return (
     <Provider store={store}>
-      <div className='App'>
+      <Router>
         <Switch>
           <Route exact path='/' component={Login} />
           <Route path='/Signup' component={Signup} />
           <Route path='/messenger' component={Messenger} />
           <Route path='/profile' component={Profile} />
         </Switch>
-      </div>
+      </Router>
     </Provider>
   )
 }
