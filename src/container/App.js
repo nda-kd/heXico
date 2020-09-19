@@ -16,7 +16,7 @@ function App () {
     <Provider store={store}>
       <div className='App'>
         <Switch>
-          <Route exact path='/' component={Login} />
+          <Route exact path='/heXico' component={Login} />
           <Route path='/Signup' component={Signup} />
           <Route path='/messenger' component={Messenger} />
           <Route path='/profile' component={Profile} />
