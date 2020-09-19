@@ -44,7 +44,7 @@ class Signup extends Component {
             <div>
               <span>Already a member? </span>
               <Button
-                onClick={() => this.props.history.push('/heXico')}
+                onClick={() => this.props.history.push('/')}
                 variant='outlined' size='large'
                 style={{
                   border: '.15em solid #0ac5e6f1',
