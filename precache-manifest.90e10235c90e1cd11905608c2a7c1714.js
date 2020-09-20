@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cbc118717b1a93ff3c80bfcf42b85a77",
+    "revision": "db29e00bbee7e2804e995316f6a51d34",
     "url": "/heXico/index.html"
   },
   {
-    "revision": "1f527d363066b199bb11",
-    "url": "/heXico/static/css/main.c4f23602.chunk.css"
+    "revision": "fc93bd0cb0666cbd8d8b",
+    "url": "/heXico/static/css/main.0f410d88.chunk.css"
   },
   {
-    "revision": "948365c52efd59b2cf36",
-    "url": "/heXico/static/js/2.bbff0d07.chunk.js"
+    "revision": "503486c8fcd462e4b31d",
+    "url": "/heXico/static/js/2.28a2068c.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/heXico/static/js/2.bbff0d07.chunk.js.LICENSE.txt"
+    "url": "/heXico/static/js/2.28a2068c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1f527d363066b199bb11",
-    "url": "/heXico/static/js/main.873f7ea8.chunk.js"
+    "revision": "fc93bd0cb0666cbd8d8b",
+    "url": "/heXico/static/js/main.8d930dff.chunk.js"
   },
   {
     "revision": "53088a161c922b5d3642",
