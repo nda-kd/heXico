@@ -1,0 +1,92 @@
+@import "../../styles/general.scss";
+
+
+.profile-wrap{ 
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-wrap{
+    @extend %flex-display;
+    align-items: center;
+    flex-grow: 1.8;
+    background-color: $primary-blue;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45em ;
+    right: 0; 
+    margin-left: 15em;
+    border-radius: 5em 0em 0em 5em ; 
+    background-color: $grey;
+    h1{
+        margin: 1em 0em 1em 0em;
+        // background-color: violet;
+    }
+}
+
+.avatar-info-wrap{
+    display: flex;
+    justify-content: center;
+    margin: 5em 0em 1em  0em;
+    // background-color: tomato;
+}
+
+.right-wrap{
+    @extend %flex-display;
+    flex-grow: 1.5;
+    align-items: center;
+    background-color: $grey;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45em ;
+    left: 0;
+    border-radius: 0em 5em 5em 0em ; 
+    margin-right: 25em;
+    background-color: $white;
+    }
+
+input[type="file"]{
+    display: none;
+    cursor: pointer;
+    }
+
+.info-changes{
+    width: 100%;
+    height: 100%;
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    height: 50%;
+    width: 62%;
+    margin: 8em 0em 0em 10em;
+}
+
+.buttons-wrap{
+    display: flex;
+    justify-content: flex-end;
+    margin: 3.5em 10em 0em 10em;
+    button{
+        margin-left: 1.5em;
+    }
+}
+
+.profile-input-wrap {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 3em;
+    input {
+    width: 26em;
+}} 

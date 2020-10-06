@@ -1,8 +1,7 @@
 import React from 'react'
 import { Avatar } from '@material-ui/core'
 import { styled } from '@material-ui/core/styles'
-import '../styles/msg.scss'
-// import bas from '../../images/Av.png'
+import './status.scss'
 
 class Status extends React.Component {
   render () {
@@ -27,10 +26,6 @@ class Status extends React.Component {
             <MyAvatar src='#' />
             <h4>My Status</h4>
           </div>
-          {/* <div className='indivisual-status'>
-                        <MyAvatar src="#" ></MyAvatar>
-                        <h4>user name</h4>
-                    </div> */}
         </div>
       </div>
     )

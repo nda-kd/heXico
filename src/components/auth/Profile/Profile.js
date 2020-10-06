@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../styles/auth.scss'
+import './profile.scss'
 import { withRouter } from 'react-router-dom'
 import { Avatar } from '@material-ui/core'
 import { styled } from '@material-ui/core/styles'

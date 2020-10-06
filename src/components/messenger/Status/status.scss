@@ -1,0 +1,41 @@
+@import "../../styles/general.scss";
+
+.status-wrap{
+    @extend %flex-display;
+    flex-grow: 0.15;
+    padding: 0em;
+    background-color: $white;
+    border-bottom: 1em solid $grey;
+    border-top: 1em solid $grey;
+    border-right: 1em solid $grey;
+    //status text
+    h4{
+      margin: 0em;
+      align-content: center;
+    }
+}
+
+.status-text{
+  display: flex;
+  align-items: center;
+  margin: 0em 0em 0em 1.5em;
+  padding: 0em;
+
+}
+
+.all-statuses{
+  display: flex;
+  margin: 1em 0em 0em 0em;
+}
+
+.indivisual-status{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0em 0em 0em 2.5em;
+  position: relative;
+  h4{
+    color: $primary-blue;
+    margin-top: .3em;
+  }
+}

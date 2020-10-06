@@ -1,0 +1,37 @@
+@import "../../styles/general.scss";
+
+.contacts-me-search-wraps{
+    @extend %flex-display;
+    flex-direction: column;
+    flex-grow: .3;
+    background-color: $grey;
+}
+
+.contacts-search-wrap{
+    @extend %flex-display;
+    justify-content: center;
+    flex-grow: 0.01;
+    background-color: $grey;
+    //search icon
+    img{
+      height: 2.4em;
+      margin: 0.49em 0em 1.8em 0em;
+      background-color: $primary-blue;
+    }
+    //search input
+    input[type="text"]{
+      width: 24em;
+      height: 2.4em;
+      margin: 0.6em 3.3em 0em 0em;
+      margin-right: 0rem;
+    }
+}
+
+.contact-lists{
+    @extend %flex-display;
+    flex-direction: column;
+    flex-grow: 6;
+    margin: 0em 3em 8em 3em;
+    background-color: $white;
+    /* background-color: rgb(20, 194, 238); */
+}

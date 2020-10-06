@@ -1,0 +1,54 @@
+@import "../../styles/general.scss";
+
+
+.contact-profile-wrap{
+    @extend %flex-display;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: .6;
+    background-color: $grey;
+}
+
+.contacts-profile{
+    @extend %flex-display;
+    flex-direction: column;
+    width: 16.5em;
+    height: 23em;
+    border-radius: 5px;
+    margin: 5em 0.5em 0em .5em ;
+    padding: 1em 2em 1em 2em;
+    background-color: $white;
+    //about label
+    label{
+      width: 18em;
+      height: 7em;
+      overflow-x: hidden;
+      // margin-top: .2em;
+    }
+    //user name
+    h2{
+      text-align: center;
+      margin: 0em;
+    }
+    //about
+    p{
+      text-align: left;
+      color: $darker-grey;
+      font-size: 1em;
+      margin: .5em 0em;
+    }
+}
+
+.contact-profile-menu-wrap{
+    display: flex;
+    
+    justify-content: space-evenly;
+    height: 2.5em;
+}
+
+hr{
+    border: 1px solid $grey;
+    width: 16em;
+    align-self: center;
+    margin-top: .5em;
+}    

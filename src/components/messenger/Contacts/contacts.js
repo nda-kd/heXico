@@ -1,7 +1,7 @@
 import React from 'react'
-import Me from './me'
-import searchIcon from '../../images/search.png'
-import '../styles/msg.scss'
+import Me from '../Me/me'
+import searchIcon from '../../../assets/search.png'
+import './contacts.scss'
 
 class Contacts extends React.Component {
   render () {

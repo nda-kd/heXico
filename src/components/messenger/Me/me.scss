@@ -1,0 +1,45 @@
+@import "../../styles/general.scss";
+
+.me{
+    @extend %flex-display;
+    justify-content: space-between;
+    flex-grow: 0.2;
+    margin: 0em;
+    padding: 0em;
+    div{
+      display: flex;
+    }
+    //setting icon
+    img{
+      cursor: pointer;
+      margin: 3.6em 3.8em 0em 0em;
+      width: 1.2em;
+      height: 1.2em;
+    }
+}
+
+.myIntroduce{
+    display: flex;
+    flex-direction: column;
+    margin: 2.2em 0em 0em 0em;
+    margin-left: 1em;
+    label{
+      width: 11em;
+      height: 2.5em;
+      overflow-x: hidden;
+      margin-top: .2em;
+    }
+    //user name
+    h2{
+      margin: 0em;
+      margin-top: .15em;
+      text-align:left
+    }
+    //about
+    p{
+      text-align: left;
+      font-size: 1em;
+      margin: 0em;
+      color: $darker-grey;
+    }
+}

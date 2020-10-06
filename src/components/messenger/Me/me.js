@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import { Avatar } from '@material-ui/core'
 import { styled, withStyles } from '@material-ui/core/styles'
 
-import '../styles/msg.scss'
-import settingIcon from '../../images/setting.png'
+import './me.scss'
+import settingIcon from '../../../assets/setting.png'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
@@ -64,7 +64,6 @@ class Me extends React.Component {
 
     const StyledMenuItem = withStyles((theme) => ({
       root: {
-
         '&:hover': {
           backgroundColor: '#0ac5e6f1',
           '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
@@ -83,14 +82,13 @@ class Me extends React.Component {
             <label>
               <p>About me </p>
             </label>
-
           </div>
         </div>
         <div>
           <img
             aria-controls='simple-menu'
             aria-haspopup='true'
-            onClick={this.handleClick}
+            onClick={(event) => this.handleClick(event)}
             src={settingIcon} alt='Setting Icon'
           />
           <StyledMenu
@@ -98,14 +96,9 @@ class Me extends React.Component {
             anchorEl={this.state.anchorEl}
             keepMounted
             open={Boolean(this.state.anchorEl)}
-            onClose={this.handleClose}
+            onClose={() => this.handleClose()}
           >
-            <Link
-              to='/Profile' style={{
-                textDecoration: 'none',
-                color: 'black'
-              }}
-            >
+            <Link to='./Profile' style={{ textDecoration: 'none', color: 'black' }}>
               <StyledMenuItem>
                 <ListItemIcon>
                   <FaceSharpIcon fontSize='small' />

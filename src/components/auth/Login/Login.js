@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
-import loginImage from '../../images/Login-image.svg'
-import '../styles/auth.scss'
+import loginImage from '../../../assets/Login-image.svg'
+import './login.scss'
 
 class Login extends Component {
   render () {
@@ -45,9 +45,8 @@ class Login extends Component {
               </div>
               <div className='login-submit'>
                 <span>
-                  <label>
-                    <input type='checkbox' id='login' name='login' /> Remember me
-                  </label>
+                  <input type='checkbox' id='login' name='login' />
+                  <label htmlFor='login' >Remember me</label>
                 </span>
                 <Button
                   variant='contained' size='large'
@@ -56,7 +55,7 @@ class Login extends Component {
                     Login
                 </Button>
               </div>
-              <Link to='/' style={{ textDecoration: 'underline' }}>Forgot your password?</Link>
+              <Link to='/'>Forgot your password?</Link>
             </div>
           </div>
         </div>

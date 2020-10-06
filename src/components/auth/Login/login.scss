@@ -1,0 +1,116 @@
+@import "../../styles/general.scss";
+
+
+.login-page-wrap{
+    @extend %flex-display;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'Baloo Tamma 2';
+    font-style: normal;
+}
+
+.login-signup-wrap{
+    @extend %flex-display;
+    flex-direction: column ; 
+    justify-content: center ;
+    flex-grow: 1;
+    height: 100vh ;
+    position: relative;
+    background-color: $primary-blue;
+}
+
+.login-signup-part{
+    @extend %flex-display;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 10% 0 0 10% ;
+    position: absolute;
+    height: 47em ;
+    right: 0;
+    left: 20em;
+    background-color: $grey;
+    div{
+        @extend %flex-display;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-start;
+        margin: 5em 4.5em;
+    }
+    img{
+        justify-self: center;
+    }
+}
+
+.login-login-wrap{
+    @extend %flex-display;
+    flex-direction: column ; 
+    justify-content: center ;
+    flex-grow: 1;
+    height: 100vh ;   
+    position: relative;
+    background-color: $grey;
+}
+
+.login-login-part{
+    @extend %flex-display;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius:0 10% 10% 0;
+    position: absolute;
+    height: 47em ;
+    right: 20em;
+    left: 0;
+    background-color: $white;
+}
+
+.login-contents{
+    @extend %flex-display;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35em;
+    margin: 5em 4.5em;
+    a{
+        text-align: left;
+    }
+} 
+
+.login-title-wrap{
+    @extend %flex-display;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 1em;
+    h1{
+        font-size: 2.3em;
+        margin: 0em;
+        height: 1.3em;
+    }
+    p{
+        font-size: 1em;
+        margin: 0em;
+        color: $darker-grey;
+     }   
+}
+
+.login-input-wrap{
+    @extend %flex-display;
+   flex-direction: column;
+   align-items: flex-start;
+   height: 20vh;
+}
+
+.input-error{
+    margin: 1em 0em .5em 0em;
+    input{
+      text-align: left;
+      height: 1.5vh;
+      min-width: 19vw;
+    }
+}
+
+.login-submit{
+    @extend %flex-display;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 4em;
+}

@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
-import signupImage from '../../images/Signup-image.svg'
-import '../styles/auth.scss'
+import signupImage from '../../../assets/Signup-image.svg'
+import './signup.scss'
 
 class Signup extends Component {
   render () {

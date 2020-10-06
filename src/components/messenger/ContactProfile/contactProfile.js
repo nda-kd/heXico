@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../styles/msg.scss'
+import './contact.profile.scss'
 import { Avatar } from '@material-ui/core'
 import { styled } from '@material-ui/core/styles'
 import CallSharpIcon from '@material-ui/icons/CallSharp'

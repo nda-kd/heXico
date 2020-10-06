@@ -1,38 +1,40 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import React, { useState } from 'react'
 import Popover from '@material-ui/core/Popover'
-import Typography from '@material-ui/core/Typography'
 import InsertEmoji from '@material-ui/icons/InsertEmoticonRounded'
 import Picker from 'emoji-picker-react'
 
-const useStyles = makeStyles((theme) => ({
-  typography: {
-    padding: theme.spacing(2)
-  }
-}))
-
 const Emoji = () => {
-  const classes = useStyles()
-  const [anchorEl, setAnchorEl] = React.useState(null)
+  const [AnchorEmoji, setAnchorEmoji] = useState(null)
+  const [chosenEmoji, setChosenEmoji] = useState('');
+
+  const onEmojiClick = (event, emojiObject) => {
+    setChosenEmoji(emojiObject);
+    console.log('chosenEmoji::', emojiObject.emoji)
+  };
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget)
+    setAnchorEmoji(event.currentTarget)
+    console.log('emoji component is running ...', AnchorEmoji)
   }
 
   const handleClose = () => {
-    setAnchorEl(null)
+    setAnchorEmoji(null)
   }
 
-  const open = Boolean(anchorEl)
+  const open = Boolean(AnchorEmoji)
   const id = open ? 'simple-popover' : undefined
 
   return (
     <div>
-      <InsertEmoji className='emoji-icon MuiIcon-fontSizeLarge' onClick={handleClick} />
+      <InsertEmoji
+        className='emoji-icon MuiIcon-fontSizeLarge'
+        onClick={handleClick}
+
+      />
       <Popover
         id={id}
         open={open}
-        anchorEl={anchorEl}
+        anchorEl={AnchorEmoji}
         onClose={handleClose}
         anchorOrigin={{
           vertical: 'bottom',
@@ -43,7 +45,8 @@ const Emoji = () => {
           horizontal: 'left'
         }}
       >
-        <Typography className={classes.typography}><Picker /></Typography>
+        <Picker onEmojiClick={onEmojiClick} />
+        <div>chosen emoji: {chosenEmoji.emoji}</div>
       </Popover>
     </div>
   )
