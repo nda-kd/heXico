@@ -2,17 +2,18 @@ import React from 'react'
 import './App.css'
 
 import { Switch, Route, HashRouter as Router } from 'react-router-dom'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
 
-import RootReducer from '../Reducer/rootReducer'
+import RootReducer from '../Redux/Reducer/rootReducer'
 
 import Messenger from '../components/messenger/MessengerContainer/messenger'
 import Login from '../components/auth/Login/Login'
 import Signup from '../components/auth/Signup/Signup'
 import Profile from '../components/auth/Profile/Profile'
 
-const store = createStore(RootReducer)
+const store = createStore(RootReducer, applyMiddleware(thunk))
 
 function App () {
   return (

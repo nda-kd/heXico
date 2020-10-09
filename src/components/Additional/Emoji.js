@@ -5,12 +5,12 @@ import Picker from 'emoji-picker-react'
 
 const Emoji = () => {
   const [AnchorEmoji, setAnchorEmoji] = useState(null)
-  const [chosenEmoji, setChosenEmoji] = useState('');
+  const [chosenEmoji, setChosenEmoji] = useState('')
 
   const onEmojiClick = (event, emojiObject) => {
-    setChosenEmoji(emojiObject);
+    setChosenEmoji(emojiObject)
     console.log('chosenEmoji::', emojiObject.emoji)
-  };
+  }
 
   const handleClick = (event) => {
     setAnchorEmoji(event.currentTarget)

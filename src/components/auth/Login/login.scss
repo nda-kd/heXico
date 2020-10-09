@@ -89,22 +89,30 @@
         font-size: 1em;
         margin: 0em;
         color: $darker-grey;
-     }   
+     }  
 }
 
 .login-input-wrap{
     @extend %flex-display;
    flex-direction: column;
    align-items: flex-start;
-   height: 20vh;
+   height: 23vh;
 }
 
 .input-error{
-    margin: 1em 0em .5em 0em;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0em 1em 0em;
     input{
       text-align: left;
       height: 1.5vh;
-      min-width: 19vw;
+      min-width: 17vw;
+    }
+    p{
+        margin: 0px;
+        font-size: .89em;
+        // height: 2vh;
+        color: red;
     }
 }
 

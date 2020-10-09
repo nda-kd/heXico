@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { sendNewMessage } from '../../../action/actions'
+import { sendNewMessage } from '../../../Redux/action/actions'
 import './send.message.scss'
 
 import AttachmentIcon from '@material-ui/icons/Attachment'
@@ -18,7 +18,7 @@ class SendMessage extends Component {
     }
   }
 
-  handleChange = (event) => {
+  handleChange(event){
     console.log('newMessage setState::',  this.state.newMessage)
     this.setState({newMessage : event.target.value})
   }
@@ -38,8 +38,6 @@ class SendMessage extends Component {
       console.log('onKey::', event.key)
   }
 
-  
-
   render () {
     return (
       <div className='send-wrap'>
@@ -51,7 +49,7 @@ class SendMessage extends Component {
         className='text-input' 
         type='text' 
         placeholder='Type a message'
-        onChange={this.handleChange}
+        onChange={(e)=>this.handleChange(e)}
         onKeyPress={this.sendKey}
          />
         <div className='attach-wrap'>
