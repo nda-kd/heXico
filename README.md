@@ -1,7 +1,6 @@
 # Project: heXico
 
-This project is a chat web application template with validated login and sign-up page
-and ability to write message on Screen.
+This project is a chat web application template with validated login and sign-up page, ability to write message on Screen and navigate through pages.
 
 #### Technologies include:
 
