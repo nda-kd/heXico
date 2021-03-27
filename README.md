@@ -8,10 +8,10 @@ and ability to write message on Screen.
 * Html-css, React, ES6, Redux, Scss, React-router-dom, Material-ui-react
 
 ## features:
-* [Login page](https://nda-kd.github.io/heXico/#/) /
-* [Sign-up page](https://nda-kd.github.io/heXico/#/Signup) /
-* [Chat page](https://nda-kd.github.io/heXico/#/messenger) /
-* [Profile](https://nda-kd.github.io/heXico/#/profile) /
+* [Login page](https://nda-kd.github.io/heXico/#/) 
+* [Sign-up page](https://nda-kd.github.io/heXico/#/Signup) 
+* [Chat page](https://nda-kd.github.io/heXico/#/messenger) 
+* [Profile](https://nda-kd.github.io/heXico/#/profile) 
 
  ### See Demo URL- [heXico](https://nda-kd.github.io/heXico/#/Messenger)
  
