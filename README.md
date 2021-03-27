@@ -1,6 +1,6 @@
 # Project: heXico
 
-This project is a chat web application template with validated login an sign-up page
+This project is a chat web application template with validated login and sign-up page
 and ability to write message on Screen.
 
 #### Technologies include:
@@ -13,7 +13,7 @@ and ability to write message on Screen.
 * [Chat page](https://nda-kd.github.io/heXico/#/messenger) 
 * [Profile](https://nda-kd.github.io/heXico/#/profile) 
 
- ### See Demo URL- [heXico](https://nda-kd.github.io/heXico/#/Messenger)
+ 
  
 <!-- <img src="Docs/carts.gif" width="300" height="360"> -->
 
@@ -21,9 +21,4 @@ and ability to write message on Screen.
 ``` 
 $ git clone https://github.com/nda-kd/heXico.git
 ```
-
-
-
-
-Messenger pages:
 
