@@ -6,7 +6,7 @@ const initState = {
       message: ' ',
       id: ''
     }
-  ]
+  ],
 }
 
 export default function RootReducer (state = initState, action) {
@@ -14,16 +14,17 @@ export default function RootReducer (state = initState, action) {
 
   switch (action.type) {
     case SEND_NEW_MESSAGE :
+      console.log("newMessage::",state.newMessage)
       return {
         ...state,
         newMessage: [
           ...state.newMessage,
           {
-            message: action.payload
+            message: action.payload 
           }
         ]
       }
-
+      
     default:
       return state
   }

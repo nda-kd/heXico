@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
+import { login } from '../../../Redux/action/actions'
 import loginImage from '../../../assets/Login-image.svg'
 import validate from '../../../validation/validation'
 import './login.scss'
@@ -23,6 +25,7 @@ class Login extends Component {
   }
 
   handleClick (e) {
+    this.props.dispatch(login(this.state.fields.email,this.state.fields.password,this.props.history))
     console.log('checkedhandle::', this.state.errors)
     const { email, password } = this.state.errors
     if (password.length === 0 && email.length === 0) {
@@ -46,9 +49,7 @@ class Login extends Component {
         ...this.state.errors,
         [name]: validate(name, value)
       }
-
     })
-
     console.log('checked::', this.state.errors)
   }
 
@@ -62,6 +63,11 @@ class Login extends Component {
       }
     })
     console.log('handleChange-login::', this.state)
+  }
+
+  componentDidMount(){
+    // const {email,password} = this.state
+    // this.props.dispatch(login(email,password))
   }
 
   render () {
@@ -144,4 +150,9 @@ class Login extends Component {
   }
 }
 
-export default Login
+const mapDispatchToProps = (dispatch) => ({
+  dispatch: dispatch
+})
+
+
+export default connect(mapDispatchToProps)(Login)
