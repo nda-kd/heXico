@@ -45,6 +45,7 @@ class SendMessage extends Component {
 
   onEmojiClick = (event, emojiObject) => {
     this.setState({ newMessage: this.state.newMessage + emojiObject.emoji });
+    this.handleClose();
   };
 
   handleClick = (event) => {

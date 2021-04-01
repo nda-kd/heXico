@@ -87,7 +87,7 @@ class Me extends React.Component {
         <div>
           <img
             aria-controls='simple-menu'
-            aria-haspopup='true'
+            // aria-haspopup='true'
             onClick={(event) => this.handleClick(event)}
             src={settingIcon} alt='Setting Icon'
           />
