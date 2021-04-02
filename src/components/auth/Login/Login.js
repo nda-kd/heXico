@@ -22,7 +22,7 @@ class Login extends Component {
         password: ''
       }
     }
-  }
+  } 
 
   handleClick (e) {
     this.props.dispatch(login(this.state.fields.email,this.state.fields.password,this.props.history))

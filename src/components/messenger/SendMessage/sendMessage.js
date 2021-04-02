@@ -65,6 +65,7 @@ class SendMessage extends Component {
     return (
       <div className="send-wrap">
         <div className="emoji-wrap">
+           {/* Emoji wrap */}
           <div>
             <InsertEmoji
               className="emoji-icon MuiIcon-fontSizeLarge"

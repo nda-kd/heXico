@@ -5,8 +5,18 @@ import { styled } from '@material-ui/core/styles'
 import CallSharpIcon from '@material-ui/icons/CallSharp'
 import VideocamIcon from '@material-ui/icons/Videocam'
 import InfoIcon from '@material-ui/icons/Info'
+import { connect } from 'react-redux'
 
 class ContactProfile extends Component {
+
+  userNameChars = (user) =>{
+    const userName = user.match(/\w+/ig)
+    let chars = ""
+    for (user in userName) chars += userName[user][0]
+    return chars.toUpperCase()
+    }
+
+
   render () {
     const MyAvatar = styled(Avatar)({
       backgroundColor: '#0ac5e6f1',
@@ -18,15 +28,17 @@ class ContactProfile extends Component {
       margin: '0.3em 0em .3em 2.2em'
     })
 
+    const user = this.props.user
+    
     return (
       <div className='contact-profile-wrap'>
         <div className='contacts-profile'>
-          <MyAvatar alt='My Avatar'>Un</MyAvatar>
-          <h2>User name</h2>
+          <MyAvatar alt='My Avatar' src={user.avatar} >{user.username ?  this.userNameChars(user.username) : "UN"}</MyAvatar>
+          <h2>{user.username ? user.username : "User Name" }</h2>
           {/* <p className='center'>Location</p> */}
           <hr />
           <label>
-            <p>about</p>
+            <p>{user.description ? user.description : "Description ..."}</p>
           </label>
           <div className='contact-profile-menu-wrap'>
             <CallSharpIcon style={{ fontSize: '35', color: '#0ac5e6f1' }} />
@@ -39,4 +51,8 @@ class ContactProfile extends Component {
   }
 }
 
-export default ContactProfile
+const mapStateToProps = (state) => ({
+  user: state.user
+})
+
+export default connect(mapStateToProps)(ContactProfile)

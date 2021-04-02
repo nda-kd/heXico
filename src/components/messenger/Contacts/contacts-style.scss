@@ -1,0 +1,77 @@
+@import "../../../styles/general.scss";
+
+.conversation{
+    display: flex;
+    flex-direction: row;
+    padding: 13px ;
+    // margin: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    // background: rgb(167, 227, 238);
+    &:focus{
+        background: red;
+        color: yellow;
+    }
+    &:hover{
+        background-color: #0ac5e683;
+    }
+}
+
+.conversationList-text{
+    display: flex;
+    flex-grow: 1;
+    // background: rgb(240, 16, 16);
+}
+
+.conversationList-info{
+    display: flex;
+    flex-grow: .5 ;
+    flex-direction: column ;
+    padding: 10px;
+    // background: rgb(240, 16, 229);
+}
+
+#conversationList-name{
+    font-weight: bold;
+    width: 9em;
+    // background: rgb(50, 16, 240);
+}
+
+#conversationList-ltsMsg{
+  color: rgb(65, 61, 61) ;
+  width: 11em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  font-size: .9rem;
+  margin: 0;
+//   background: rgb(150, 201, 12);
+  resize:unset;
+}
+
+#conversationListv-date{
+    padding: 10px;
+    padding-left: 0 ;
+    flex-grow: .55;
+    font-size: 10px;
+    color: rgb(65, 61, 61) ;
+    width: .3em;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    // background: rgb(240, 106, 16);
+}
+
+.conversationList-avatar{
+    width: 65px;
+    height:65px;
+    border-radius: 50%;
+    flex-grow: 0;
+}
+
+.hr-contacts{
+    margin-top: 0em;
+    margin-bottom: 0em;
+    // justify-self: center;
+}

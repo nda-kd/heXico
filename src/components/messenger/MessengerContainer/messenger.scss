@@ -8,7 +8,7 @@ body{
     display: flex;
     width: 100vw;
     height: 100vh;
-    // background-color: blue; 
+    background-color: blue; 
 }
   
 .chat-send-profile-status-wrap{
@@ -16,17 +16,26 @@ body{
     flex-direction: column;
     flex-grow: 2;
     padding: 0em;
+    background: rgb(240, 16, 16);
 }
 
 .chat-send-profile-wrap{
     @extend %flex-display;
-    flex-grow: 4;
-    /* background-color: brown; */
+    flex-grow: 3;
+    background-color: brown;
 }
 
 .chat-send-wrap{
     @extend %flex-display;
     flex-direction: column;
     flex-grow: 3;
-    /* background-color: cyan; */
+     background-color: cyan; 
+}
+
+.ContactList-wrap{
+    @extend %flex-display;
+    flex-direction: column;
+    flex-grow: .25;
+    height: 100vh;
+    background-color: violet;
 }

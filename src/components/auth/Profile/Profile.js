@@ -16,6 +16,7 @@ import PhotoCamera from '@material-ui/icons/PhotoCamera'
 import IconButton from '@material-ui/core/IconButton'
 import PersonIcon from '@material-ui/icons/Person'
 import Grid from '@material-ui/core/Grid'
+// import axios from 'axios'
 
 class Profile extends Component {
   render () {
