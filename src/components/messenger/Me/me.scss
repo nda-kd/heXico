@@ -6,19 +6,20 @@
     flex-grow: 0.2;
     margin: 0em;
     padding-left: .8em;
+    width: 80%;
     // background-color: violet;
     div{
       display: flex;
       // background-color: red;
     }
     //setting icon
-    img{
+    .setting-icon{
       cursor: pointer;
-      margin: 3.6em 0em 0em 0em;
-      padding-left: 4.7em ;
+      margin: 3.6em 0em 0em 3.5em;
+      // padding-left: 4em ;
       width: 1.2em;
       height: 1.2em;
-      // background-color: brown;
+      // background-color: rgb(63, 62, 62);
     }
 }
 
@@ -28,8 +29,8 @@
     margin: 2.2em 0em 0em 0em;
     margin-left: 1em;
     label{
-      width: 11em;
-      height: 2.5em;
+      width: 12em;
+      height: 3.5em;
       overflow-x: hidden;
       margin-top: .2em;
     }

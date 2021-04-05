@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './profile.scss'
-import { withRouter } from 'react-router-dom'
 import { Avatar } from '@material-ui/core'
 import { styled } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
@@ -13,12 +12,70 @@ import EmailSharpIcon from '@material-ui/icons/EmailSharp'
 import InfoSharpIcon from '@material-ui/icons/InfoSharp'
 import Badge from '@material-ui/core/Badge'
 import PhotoCamera from '@material-ui/icons/PhotoCamera'
+import EditRoundedIcon from '@material-ui/icons/EditRounded';
 import IconButton from '@material-ui/core/IconButton'
 import PersonIcon from '@material-ui/icons/Person'
 import Grid from '@material-ui/core/Grid'
-// import axios from 'axios'
+import { connect } from 'react-redux'
+import { getAvatar, profileInfo } from '../../../Redux/action/actions'
 
 class Profile extends Component {
+
+  constructor (props) {
+    super(props)
+    this.state = {
+      selectedFile: null,
+      imageUrl: this.props.adminAvatar,
+      edit: false,
+      admin: {
+        username: this.props.admin.username,
+        email: this.props.admin.email,
+        password: this.props.admin.password,
+        number: this.props.admin.number,
+        description: this.props.admin.description,
+        status: this.props.admin.status 
+      }
+    }
+  }
+
+  fileChangedHandler = event => {
+    this.setState({
+      selectedFile: event.target.files[0]
+    })
+ 
+    let reader = new FileReader();
+     
+    reader.onloadend = () => {
+      this.setState({
+         imageUrl: reader.result
+      });
+    }
+ 
+    reader.readAsDataURL(event.target.files[0])
+    console.log("imageUrl",this.state.imageUrl)
+  }
+
+  onChangeHandle = (e)=>{
+    const {name, value} = e.target
+    this.setState({
+      admin: {...this.state.admin, [name]: value}
+    })
+  }
+
+  saveClickHandle = () =>{
+    this.props.dispatch(getAvatar(this.state.imageUrl))
+    this.props.dispatch(profileInfo(this.state.admin))
+    this.props.history.push("./messenger")
+  }
+
+  editKeyPress = (e)=>{
+    if(e.key === 'Enter'){
+      this.setState({admin: { ...this.state.admin, username: e.target.value }})
+      this.setState({edit: false})
+    }
+    
+  }
+
   render () {
     const MyAvatar = styled(Avatar)({
       backgroundColor: '#0ac5e6f1',
@@ -44,7 +101,7 @@ class Profile extends Component {
                 badgeContent={
                   <div>
                     <input
-                      accept='image/*' id='icon-button-file' type='file'
+                      accept='image/*' id='icon-button-file' type='file' onChange={this.fileChangedHandler}
                     />
                     <label htmlFor='icon-button-file'>
                       <IconButton color='primary' aria-label='upload picture' component='span'>
@@ -54,12 +111,38 @@ class Profile extends Component {
                   </div>
                 }
               >
-                <MyAvatar alt='My Avatar'>Un</MyAvatar>
+                <MyAvatar alt='My Avatar' src={this.state.imageUrl}>A</MyAvatar>
               </Badge>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <PersonIcon style={{ fontSize: '2em', marginTop: '1.1em', marginRight: '.5em', color: '#0ac5e6f1' }} />
-              <h1>User name</h1>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: "1.3em" }}>
+              <PersonIcon 
+                style={{ 
+                fontSize: '2em', 
+                marginTop: '1.22em', 
+                marginRight: '.3em', 
+                color: '#0ac5e6f1' }} 
+              />
+              {!this.state.edit ? 
+              <h1>{this.state.admin.username ? this.state.admin.username : "Admin"}</h1>
+              : <input 
+              className='edit-input' 
+              placeholder={this.state.admin.username}
+              // onChange={this.onChangeHandle}
+              onKeyPress={this.editKeyPress}
+              onBlur={this.editKeyPress}
+               />
+             }
+              <EditRoundedIcon onClick={()=> this.setState({edit: true})} 
+                style={{ 
+                fontSize: '1.4em', 
+                marginTop: '1.99em', 
+                marginLeft: '.3em', 
+                backgroundColor: '#0ac5e6f1',
+                borderRadius: '.2em',
+                color: 'white',
+                cursor: 'pointer'
+              }} 
+              />
             </div>
           </div>
 
@@ -75,7 +158,7 @@ class Profile extends Component {
                       <EmailSharpIcon />
                     </Grid>
                     <Grid item>
-                      <TextField id='input-with-icon-grid1' label='Email' />
+                      <TextField id='input-with-icon-grid1' label='Email' name="email" onChange={this.onChangeHandle} />
                     </Grid>
                   </Grid>
                 </div>
@@ -85,7 +168,7 @@ class Profile extends Component {
                       <CallEndSharpIcon />
                     </Grid>
                     <Grid item>
-                      <TextField id='input-with-icon-grid2' label='Number' />
+                      <TextField id='input-with-icon-grid2' label='Number' name="number" onChange={this.onChangeHandle} />
                     </Grid>
                   </Grid>
                 </div>
@@ -95,7 +178,7 @@ class Profile extends Component {
                       <VpnKeySharpIcon />
                     </Grid>
                     <Grid item>
-                      <TextField type='password' id='input-with-icon-grid3' label='Password' />
+                      <TextField type='password' id='input-with-icon-grid3' label='Password' name="password" onChange={this.onChangeHandle} />
                     </Grid>
                   </Grid>
                 </div>
@@ -105,7 +188,7 @@ class Profile extends Component {
                       <InfoSharpIcon />
                     </Grid>
                     <Grid item>
-                      <TextField id='input-with-icon-grid4' label='About' />
+                      <TextField id='input-with-icon-grid4' label='About' name="description" onChange={this.onChangeHandle} />
                     </Grid>
                   </Grid>
                 </div>
@@ -117,6 +200,7 @@ class Profile extends Component {
                   size='large'
                   startIcon={<SaveIcon />}
                   style={{ fontSize: '.8em', backgroundColor: '#0ac5e6f1' }}
+                  onClick={this.saveClickHandle}
                 >
                 Save
                 </Button>
@@ -140,4 +224,13 @@ class Profile extends Component {
   }
 }
 
-export default withRouter(Profile)
+const mapStateToProps = state =>({
+  adminAvatar: state.adminAvatar,
+  admin: state.admin
+})
+
+const mapDispatchToProps = dispatch =>({
+  dispatch: dispatch
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Profile)

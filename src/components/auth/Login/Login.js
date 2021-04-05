@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { profileInfo } from '../../../Redux/action/actions'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
-import { login } from '../../../Redux/action/actions'
+import { authenticatedUser } from '../../../Redux/action/actions'
 import loginImage from '../../../assets/Login-image.svg'
 import validate from '../../../validation/validation'
 import './login.scss'
@@ -13,21 +14,35 @@ class Login extends Component {
     super(props)
 
     this.state = {
+
       fields: {
         email: '',
         password: ''
       },
+
       errors: {
         email: '',
         password: ''
+      },
+
+      admin: {
+        id: "0",
+        username: "Admin",
+        email: "admin@gmail.com",
+        password: "qwertyuio",
+        number: "210-067-6132",
+        description: "There's magic on the other side of fear.",
+        status: true ,
       }
     }
   } 
 
+
   handleClick (e) {
-    this.props.dispatch(login(this.state.fields.email,this.state.fields.password,this.props.history))
+    // this.props.dispatch(login(this.state.fields.email,this.state.fields.password,this.props.history))
     console.log('checkedhandle::', this.state.errors)
     const { email, password } = this.state.errors
+
     if (password.length === 0 && email.length === 0) {
       this.setState({
         ...this.state,
@@ -38,6 +53,13 @@ class Login extends Component {
       })
       console.log(':::clicked')
     }
+
+    if(this.state.fields.email === 'admin@gmail.com' && this.state.fields.password === '12345678'){
+      this.props.dispatch(profileInfo(this.state.admin))
+      this.props.dispatch(authenticatedUser(true))
+      this.props.history.push("/messenger");
+    }
+
   }
 
   handleValidation (event) {
@@ -63,11 +85,6 @@ class Login extends Component {
       }
     })
     console.log('handleChange-login::', this.state)
-  }
-
-  componentDidMount(){
-    // const {email,password} = this.state
-    // this.props.dispatch(login(email,password))
   }
 
   render () {
@@ -153,6 +170,5 @@ class Login extends Component {
 const mapDispatchToProps = (dispatch) => ({
   dispatch: dispatch
 })
-
 
 export default connect(mapDispatchToProps)(Login)

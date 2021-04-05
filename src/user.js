@@ -8,6 +8,7 @@ const USERS =  [
         description: "No person is free who is not master of themselves.",
         avatar: "https://i.pinimg.com/564x/32/3b/7d/323b7d592b447f7306c300f665670d37.jpg",
         lastLogin: "11-02-2021",
+        status: true ,
         conversationList: []
     },
     {
@@ -19,6 +20,7 @@ const USERS =  [
         description: "Pick yourself up and fight another day.",
         avatar: "https://i.pinimg.com/564x/f5/6f/a5/f56fa5284fed1fc9c4ac0516c8673aab.jpg",
         lastLogin: "11-02-2021",
+        status: true ,
         conversationList: []
     },
     {
@@ -30,6 +32,7 @@ const USERS =  [
         description: "It is okay to live a life that others don’t understand.",
         avatar: "https://i.pinimg.com/564x/99/0c/4a/990c4a4263991338d8ca64f7e073ca26.jpg",
         lastLogin: "11-02-2021",
+        status: false ,
         conversationList: []
     },
     {
@@ -41,6 +44,7 @@ const USERS =  [
        description: "Negative thoughts will never give you a positive life.",
        avatar: "https://i.pinimg.com/564x/78/2e/25/782e258ac2f7f5a22236a3ac7c447689.jpg",
        lastLogin: "11-02-2021",
+       status: false ,
        conversationList: []
     },
     {
@@ -52,6 +56,7 @@ const USERS =  [
         description: "Be fearless in the pursuit of what sets your soul on fire.",
         avatar: "https://i.pinimg.com/564x/ee/2b/4f/ee2b4f31b2de109ec7c244e4fd3594d5.jpg",
         lastLogin: "11-02-2021",
+        status: true ,
         conversationList: []
     },
     {
@@ -63,6 +68,7 @@ const USERS =  [
         description: "Vision without action is just a daydream.",
         avatar: "https://i.pinimg.com/564x/01/8c/d8/018cd8cf96836dc302f54c1d0d29ace3.jpg",
         lastLogin: "11-02-2021",
+        status: false ,
         conversationList: []
     },
     // {
@@ -83,7 +89,7 @@ const USERS =  [
     //     password: "qwerty",
     //     number: "099-95-2189",
     //     description: "The pain you feel today is the strength you will feel tomorrow.",
-    //     avatar: "",
+    //     avatar: "https://wallup.net/wp-content/uploads/2016/12/07/134237-women-redhead-glasses.jpg",
     //     lastLogin: "11-02-2021",
     //     conversationList: []
     // }

@@ -1,121 +1,138 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Avatar } from '@material-ui/core'
-import { styled, withStyles } from '@material-ui/core/styles'
+import React from "react";
+import { Link, withRouter } from "react-router-dom";
+import { Avatar } from "@material-ui/core";
+import { styled, withStyles } from "@material-ui/core/styles";
+import { connect } from "react-redux";
+import { compose } from 'redux'
+import { authenticatedUser } from '../../../Redux/action/actions'
 
-import './me.scss'
-import settingIcon from '../../../assets/setting.png'
-import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import ListItemText from '@material-ui/core/ListItemText'
-import FaceSharpIcon from '@material-ui/icons/FaceSharp'
-import ExitToAppSharpIcon from '@material-ui/icons/ExitToAppSharp'
+import "./me.scss";
+import settingIcon from "../../../assets/setting.png";
+import MenuItem from "@material-ui/core/MenuItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import FaceSharpIcon from "@material-ui/icons/FaceSharp";
+import ExitToAppSharpIcon from "@material-ui/icons/ExitToAppSharp";
+import { Popover } from "react-tiny-popover";
 
 class Me extends React.Component {
-  constructor () {
-    super()
+  constructor(props) {
+    super(props);
 
     this.state = {
-      anchorEl: null
-    }
+      anchorEl: null,
+    };
   }
 
-  handleClick (event) {
-    this.setState({ anchorEl: event.currentTarget })
+  handleClick(event) {
+    this.setState({ anchorEl: !this.state.anchorEl });
   }
 
-  handleClose () {
-    this.setState({ anchorEl: null })
+  handleClose() {
+    this.setState({ anchorEl: null });
   }
 
-  render () {
+  signOut = ()=> {
+    this.props.dispatch(authenticatedUser(false))
+    this.props.history.push('./')
+  }
+
+  render() {
     const MyAvatar = styled(Avatar)({
-      backgroundColor: '#0ac5e6f1',
-      color: 'white',
-      fontSize: '2em',
-      fontFamily: 'sans-serif',
-      width: '4.8vw',
-      height: '9.8vh',
-      margin: '0.5em 0em 0em 1em'
-    })
-
-    const StyledMenu = withStyles({
-      paper: {
-        border: '1px solid #d3d4d5',
-        width: '9.5em'
-      }
-
-    })((props) => (
-      <Menu
-        elevation={0}
-        getContentAnchorEl={null}
-        anchorOrigin={{
-          vertical: 'center',
-          horizontal: 'right'
-        }}
-        transformOrigin={{
-          vertical: 'center',
-          horizontal: 'right'
-        }}
-        {...props}
-      />
-    ))
+      backgroundColor: "#0ac5e6f1",
+      color: "white",
+      fontSize: "2em",
+      fontFamily: "sans-serif",
+      width: "4.8vw",
+      height: "9.8vh",
+      margin: "0.5em 0em 0em 1em",
+    });
 
     const StyledMenuItem = withStyles((theme) => ({
       root: {
-        '&:hover': {
-          backgroundColor: '#0ac5e6f1',
-          '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
-            color: theme.palette.common.white
-          }
-        }
-      }
-    }))(MenuItem)
+        "&:hover": {
+          backgroundColor: "#0ac5e6f1",
+          "& .MuiListItemIcon-root, & .MuiListItemText-primary": {
+            color: theme.palette.common.white,
+          },
+        },
+      },
+    }))(MenuItem);
 
     return (
-      <div className='me'>
+      <div className="me">
         <div>
-          <MyAvatar alt='My Avatar'>Un</MyAvatar>
-          <div className='myIntroduce'>
-            <h2>User name</h2>
+          <MyAvatar alt="My Avatar" src={this.props.adminAvatar}>
+            A
+          </MyAvatar>
+          <div className="myIntroduce">
+            <h2>
+              {this.props.admin.username ? this.props.admin.username : "Admin"}
+            </h2>
             <label>
-              <p>About me </p>
+              <p>
+                {this.props.admin.description
+                  ? this.props.admin.description
+                  : "you didn't login properly"}
+              </p>
             </label>
           </div>
         </div>
         <div>
-          <img
-            aria-controls='simple-menu'
-            // aria-haspopup='true'
-            onClick={(event) => this.handleClick(event)}
-            src={settingIcon} alt='Setting Icon'
-          />
-          <StyledMenu
-            id='customized-menu'
-            anchorEl={this.state.anchorEl}
-            keepMounted
-            open={Boolean(this.state.anchorEl)}
-            onClose={() => this.handleClose()}
+          <Popover
+            isOpen={this.state.anchorEl}
+            positions={["top","left","bottom","right"]} // preferred positions by priority
+            content={
+              <div style={{backgroundColor: "white", padding: ".6em 0em", marginLeft: "0em"}}>
+                <Link
+                  to="./Profile"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <StyledMenuItem>
+                    <ListItemIcon>
+                      <FaceSharpIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText primary="Profile" style={{color:" rgb(63, 62, 62)"}}/>
+                  </StyledMenuItem>
+                </Link>
+                <Link
+                  to="./"
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <StyledMenuItem onClick={this.signOut}>
+                    <ListItemIcon>
+                      <ExitToAppSharpIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText primary="Sign Out" style={{color:" rgb(63, 62, 62)"}}  />
+                  </StyledMenuItem>
+                </Link>
+              </div>
+            }
           >
-            <Link to='./Profile' style={{ textDecoration: 'none', color: 'black' }}>
-              <StyledMenuItem>
-                <ListItemIcon>
-                  <FaceSharpIcon fontSize='small' />
-                </ListItemIcon>
-                <ListItemText primary='Profile' />
-              </StyledMenuItem>
-            </Link>
-            <StyledMenuItem>
-              <ListItemIcon>
-                <ExitToAppSharpIcon fontSize='small' />
-              </ListItemIcon>
-              <ListItemText primary='Sign Out' />
-            </StyledMenuItem>
-          </StyledMenu>
+            <img
+              aria-controls="simple-menu"
+              className="setting-icon"
+              onClick={(event) => this.handleClick(event)}
+              src={settingIcon}
+              alt="Setting Icon"
+            />
+          </Popover>
         </div>
       </div>
-    )
+    );
   }
 }
-export default Me
+
+const mapStateToProps = (state) => ({
+  adminAvatar: state.adminAvatar,
+  admin: state.admin,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  dispatch: dispatch
+})
+
+const ShowTheLocationWithRouter = withRouter(Me);
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShowTheLocationWithRouter)
+// compose(withRouter,connect(mapStateToProps, mapDispatchToProps)(Me)) ;
