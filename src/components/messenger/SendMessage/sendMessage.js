@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { sendNewMessage } from "../../../Redux/action/actions";
+
 import "./send.message.scss";
 
 import AttachmentIcon from "@material-ui/icons/Attachment";
 import sendButton from "../../../assets/SEND.svg";
 
+import { Popover } from "react-tiny-popover";
+
 import Picker from "emoji-picker-react";
-import Popover from "@material-ui/core/Popover";
 import InsertEmoji from "@material-ui/icons/InsertEmoticonRounded";
 
 class SendMessage extends Component {
@@ -15,23 +17,38 @@ class SendMessage extends Component {
     super();
 
     this.state = {
-      newMessage: "",
-      chosenEmoji: "",
+      newMessage: {
+        message: "",
+        id: "",
+      },
       AnchorEmoji: null,
     };
   }
 
   handleChange(event) {
     console.log("newMessage setState::", this.state.newMessage);
-    this.setState({ newMessage: event.target.value });
+    this.setState({
+      newMessage: { message: event.target.value, id: this.props.userId },
+    });
   }
 
   sendMessage = () => {
-    if (this.state.newMessage.length === 0 || this.state.newMessage === " ") {
+    if (this.state.newMessage.id === undefined) {
+      this.setState({
+        newMessage: { ...this.state.newMessage, message: "" },
+      });
+      alert("Please chosse a user to start a chat ");
+      return;
+    } else if (
+      (this.state.newMessage.message.length === 0 ||
+        this.state.newMessage.message === " ") &&
+      this.state.newMessage.id !== undefined
+    ) {
       return;
     }
+
     this.props.dispatch(sendNewMessage(this.state.newMessage));
-    this.setState({ newMessage: "" });
+    this.setState({ newMessage: { message: "", id: "" } });
 
     console.log("newMessage setState click::", this.state.newMessage);
   };
@@ -41,15 +58,21 @@ class SendMessage extends Component {
     console.log("onKey::", event.key);
   };
 
-  //emoji function::
+  //emoji functions::
 
   onEmojiClick = (event, emojiObject) => {
-    this.setState({ newMessage: this.state.newMessage + emojiObject.emoji });
+    console.log("emoj::", this.state.newMessage);
+    this.setState({
+      newMessage: {
+        message: this.state.newMessage.message + emojiObject.emoji,
+        id: this.props.userId,
+      },
+    });
     this.handleClose();
   };
 
   handleClick = (event) => {
-    this.setState({ AnchorEmoji: event.currentTarget });
+    this.setState({ AnchorEmoji: !this.state.AnchorEmoji });
     console.log("emoji component is running ...", this.state.AnchorEmoji);
   };
 
@@ -58,39 +81,26 @@ class SendMessage extends Component {
   };
 
   render() {
-    console.log("chosenEmoji", this.state.chosenEmoji);
-    const open = Boolean(this.state.AnchorEmoji);
-    const id = open ? "simple-popover" : undefined;
-
+    console.log("userId", this.props.userId);
     return (
       <div className="send-wrap">
         <div className="emoji-wrap">
-           {/* Emoji wrap */}
+          {/* Emoji wrap */}
           <div>
-            <InsertEmoji
-              className="emoji-icon MuiIcon-fontSizeLarge"
-              onClick={this.handleClick}
-            />
             <Popover
-              id={id}
-              open={open}
-              anchorEl={this.state.AnchorEmoji}
-              onClose={this.handleClose}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "center",
-              }}
-              transformOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
+              isOpen={this.state.AnchorEmoji}
+              positions={["top", "bottom", "left", "right"]} // preferred positions by priority
+              content={<Picker onEmojiClick={this.onEmojiClick} />}
             >
-              <Picker onEmojiClick={this.onEmojiClick} />
+              <InsertEmoji
+                className="emoji-icon MuiIcon-fontSizeLarge"
+                onClick={this.handleClick}
+              />
             </Popover>
           </div>
         </div>
         <input
-          value={this.state.newMessage}
+          value={this.state.newMessage.message}
           className="text-input"
           type="text"
           placeholder="Type a message"
@@ -118,7 +128,7 @@ class SendMessage extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  newEmoji: state.newEmoji,
+  userId: state.user.id,
 });
 
 const mapDispatchToProps = (dispatch) => ({

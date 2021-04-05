@@ -2,19 +2,23 @@
 
 .me{
     @extend %flex-display;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-grow: 0.2;
     margin: 0em;
-    padding: 0em;
+    padding-left: .8em;
+    // background-color: violet;
     div{
       display: flex;
+      // background-color: red;
     }
     //setting icon
     img{
       cursor: pointer;
-      margin: 3.6em 3.8em 0em 0em;
+      margin: 3.6em 0em 0em 0em;
+      padding-left: 4.7em ;
       width: 1.2em;
       height: 1.2em;
+      // background-color: brown;
     }
 }
 

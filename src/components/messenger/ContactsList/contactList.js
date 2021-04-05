@@ -16,6 +16,7 @@ class ContactList extends React.Component {
   }
     
   render () {
+    console.log("USERS",this.state.users)
     return (
       <div className='contacts-me-search-wraps'>
         <Me />
@@ -33,6 +34,7 @@ class ContactList extends React.Component {
               lastLogin={user.lastLogin}
               description={user.description}
               avatar={user.avatar}
+              conversationList={user.conversationList}
             />
           ))
         }

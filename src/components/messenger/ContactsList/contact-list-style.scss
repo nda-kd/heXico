@@ -3,7 +3,7 @@
 .contacts-me-search-wraps{
     @extend %flex-display;
     flex-direction: column;
-    flex-grow: .3;
+    flex-grow: .1;
     height: 100vh;
     background-color: $grey;
 }
@@ -33,6 +33,7 @@
     flex-grow: 6;
     margin: 0em 3em 8.5em 3em;
     background-color: $white;
-    width: 73%;
+    width: 74%;
+    overflow: auto;
     // background-color: rgb(241, 15, 15);
 }

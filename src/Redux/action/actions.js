@@ -3,9 +3,9 @@ export const SEND_NEW_MESSAGE = "SEND_NEW_MESSAGE";
 export const SEND_NEW_EMOJI = "SEND_NEW_EMOJI";
 export const GET_CONVERSATION = "GET_CONVERSATION";
 
-export const sendNewMessage = (message) => ({
+export const sendNewMessage = (newMessage) => ({
   type: SEND_NEW_MESSAGE,
-  payload: message,
+  payload: newMessage,
 });
 
 export const getConversation = (user) => ({
@@ -16,7 +16,7 @@ export const getConversation = (user) => ({
 export const login = (email, password, history) => {
   return function () {
     return axios
-      .post("https://api.github.com/users", {
+      .post("http://localhost:3000/users", {
         email: email,
         password: password,
       })

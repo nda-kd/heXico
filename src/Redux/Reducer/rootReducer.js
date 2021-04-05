@@ -2,12 +2,7 @@ import { SEND_NEW_MESSAGE } from '../action/actions'
 import { GET_CONVERSATION } from '../action/actions'
 
 const initState = {
-  newMessage: [
-    {
-      message: ' ',
-      id: ''
-    }
-  ],
+  newMessage: [],
   user : ''
 }
  
@@ -19,16 +14,12 @@ export default function RootReducer (state = initState, action) {
       console.log("newMessage::",state.newMessage)
       return {
         ...state,
-        newMessage: [
-          ...state.newMessage,
-          {
-            message: action.payload 
-          }
-        ]
+        newMessage: [...state.newMessage, action.payload]
+
       }
     
     case GET_CONVERSATION:
-      console.log("conversation::",state.user)
+      console.log("conversationaction::",state.user)
       return {
         ...state,
         user: action.payload
