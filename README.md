@@ -9,10 +9,13 @@ This project is a chat web application template with validated login and sign-up
 ## features:
 * [Login page](https://nda-kd.github.io/heXico/#/) 
 * [Sign-up page](https://nda-kd.github.io/heXico/#/Signup) 
-* [Chat page](https://nda-kd.github.io/heXico/#/messenger) 
-* [Profile](https://nda-kd.github.io/heXico/#/profile) 
+* Chat page
+* Profile 
 
- 
+``` 
+Email: admin@gmail.com <br/>
+Password: 12345678
+```
  
 <!-- <img src="Docs/carts.gif" width="300" height="360"> -->
 
