@@ -13,7 +13,7 @@ This project is a chat web application template with validated login and sign-up
 * Profile 
 
 ``` 
-Email: admin@gmail.com <br/>
+Email: admin@gmail.com 
 Password: 12345678
 ```
  
