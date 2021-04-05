@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/heXico/static/css/main.b7df5cda.chunk.css",
-    "main.js": "/heXico/static/js/main.4963af8e.chunk.js",
-    "main.js.map": "/heXico/static/js/main.4963af8e.chunk.js.map",
+    "main.js": "/heXico/static/js/main.425c432c.chunk.js",
+    "main.js.map": "/heXico/static/js/main.425c432c.chunk.js.map",
     "runtime-main.js": "/heXico/static/js/runtime-main.e0acc692.js",
     "runtime-main.js.map": "/heXico/static/js/runtime-main.e0acc692.js.map",
-    "static/js/2.5c3a8800.chunk.js": "/heXico/static/js/2.5c3a8800.chunk.js",
-    "static/js/2.5c3a8800.chunk.js.map": "/heXico/static/js/2.5c3a8800.chunk.js.map",
+    "static/js/2.6846bceb.chunk.js": "/heXico/static/js/2.6846bceb.chunk.js",
+    "static/js/2.6846bceb.chunk.js.map": "/heXico/static/js/2.6846bceb.chunk.js.map",
     "static/js/3.95129edb.chunk.js": "/heXico/static/js/3.95129edb.chunk.js",
     "static/js/3.95129edb.chunk.js.map": "/heXico/static/js/3.95129edb.chunk.js.map",
     "index.html": "/heXico/index.html",
     "static/css/main.b7df5cda.chunk.css.map": "/heXico/static/css/main.b7df5cda.chunk.css.map",
-    "static/js/2.5c3a8800.chunk.js.LICENSE.txt": "/heXico/static/js/2.5c3a8800.chunk.js.LICENSE.txt",
+    "static/js/2.6846bceb.chunk.js.LICENSE.txt": "/heXico/static/js/2.6846bceb.chunk.js.LICENSE.txt",
     "static/media/messenger.scss": "/heXico/static/media/BalooTamma2-Regular.51bbfac1.ttf",
     "static/media/Login-image.41f8fcac.svg": "/heXico/static/media/Login-image.41f8fcac.svg",
     "static/media/SEND.520967de.svg": "/heXico/static/media/SEND.520967de.svg",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e0acc692.js",
-    "static/js/2.5c3a8800.chunk.js",
+    "static/js/2.6846bceb.chunk.js",
     "static/css/main.b7df5cda.chunk.css",
-    "static/js/main.4963af8e.chunk.js"
+    "static/js/main.425c432c.chunk.js"
   ]
 }
