@@ -3,8 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import { Avatar } from "@material-ui/core";
 import { styled, withStyles } from "@material-ui/core/styles";
 import { connect } from "react-redux";
-import { compose } from 'redux'
-import { authenticatedUser } from '../../../Redux/action/actions'
+import { authenticatedUser } from "../../../Redux/action/actions";
 
 import "./me.scss";
 import settingIcon from "../../../assets/setting.png";
@@ -32,10 +31,10 @@ class Me extends React.Component {
     this.setState({ anchorEl: null });
   }
 
-  signOut = ()=> {
-    this.props.dispatch(authenticatedUser(false))
-    this.props.history.push('./')
-  }
+  signOut = () => {
+    this.props.dispatch(authenticatedUser(false));
+    this.props.history.push("./");
+  };
 
   render() {
     const MyAvatar = styled(Avatar)({
@@ -81,9 +80,15 @@ class Me extends React.Component {
         <div>
           <Popover
             isOpen={this.state.anchorEl}
-            positions={["top","left","bottom","right"]} // preferred positions by priority
+            positions={["top", "left", "bottom", "right"]} // preferred positions by priority
             content={
-              <div style={{backgroundColor: "white", padding: ".6em 0em", marginLeft: "0em"}}>
+              <div
+                style={{
+                  backgroundColor: "white",
+                  padding: ".6em 0em",
+                  marginLeft: "0em",
+                }}
+              >
                 <Link
                   to="./Profile"
                   style={{ textDecoration: "none", color: "black" }}
@@ -92,7 +97,10 @@ class Me extends React.Component {
                     <ListItemIcon>
                       <FaceSharpIcon fontSize="small" />
                     </ListItemIcon>
-                    <ListItemText primary="Profile" style={{color:" rgb(63, 62, 62)"}}/>
+                    <ListItemText
+                      primary="Profile"
+                      style={{ color: " rgb(63, 62, 62)" }}
+                    />
                   </StyledMenuItem>
                 </Link>
                 <Link
@@ -103,7 +111,10 @@ class Me extends React.Component {
                     <ListItemIcon>
                       <ExitToAppSharpIcon fontSize="small" />
                     </ListItemIcon>
-                    <ListItemText primary="Sign Out" style={{color:" rgb(63, 62, 62)"}}  />
+                    <ListItemText
+                      primary="Sign Out"
+                      style={{ color: " rgb(63, 62, 62)" }}
+                    />
                   </StyledMenuItem>
                 </Link>
               </div>
@@ -129,10 +140,13 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  dispatch: dispatch
-})
+  dispatch: dispatch,
+});
 
 const ShowTheLocationWithRouter = withRouter(Me);
 
-export default connect(mapStateToProps, mapDispatchToProps)(ShowTheLocationWithRouter)
-// compose(withRouter,connect(mapStateToProps, mapDispatchToProps)(Me)) ;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ShowTheLocationWithRouter);
+

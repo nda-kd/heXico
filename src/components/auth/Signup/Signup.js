@@ -106,19 +106,19 @@ class Signup extends Component {
               </div>
               <div className='signup-input-wrap'>
                 <div className='two-input-wrap'>
-                  <TextField 
-                  variant='outlined' 
-                  label='User Name' 
-                  name = 'userName'
-                  value={this.state.fields.userName}
-                  onChange={(e) => this.handleChange(e)}
+                  <TextField
+                    variant='outlined'
+                    label='User Name'
+                    name='userName'
+                    value={this.state.fields.userName}
+                    onChange={(e) => this.handleChange(e)}
                   />
-                  <TextField 
-                  variant='outlined' 
-                  label='Number' 
-                  name= 'number'
-                  value={this.state.fields.number}
-                  onChange={(e) => this.handleChange(e)}
+                  <TextField
+                    variant='outlined'
+                    label='Number'
+                    name='number'
+                    value={this.state.fields.number}
+                    onChange={(e) => this.handleChange(e)}
                   />
                 </div>
                 <div className='two-input-wrap'>
@@ -162,7 +162,7 @@ class Signup extends Component {
                   style={{ backgroundColor: '#0ac5e6f1' }}
                   onClick={(e) => this.handleClick(e)}
                 >
-                    sign up
+                  sign up
                 </Button>
               </div>
             </div>
@@ -181,7 +181,7 @@ class Signup extends Component {
                   marginLeft: '.5em'
                 }}
               >
-                    Login
+                Login
               </Button>
             </div>
             <img alt='' src={signupImage} />

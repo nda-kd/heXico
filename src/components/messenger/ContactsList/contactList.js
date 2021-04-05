@@ -6,17 +6,16 @@ import USERS from '../../../user'
 import Contacts from '../Contacts/contacts'
 
 class ContactList extends React.Component {
-
-  constructor(){
+  constructor () {
     super()
 
     this.state = {
-      users : USERS
+      users: USERS
     }
   }
-    
+
   render () {
-    console.log("USERS",this.state.users)
+    console.log('USERS', this.state.users)
     return (
       <div className='contacts-me-search-wraps'>
         <Me />
@@ -25,12 +24,12 @@ class ContactList extends React.Component {
           <input type='text' name='search' placeholder='Search...' />
         </div>
         <div className='contact-lists'>
-        {
-          this.state.users.map((user,userID) => ( 
-            <Contacts 
+          {
+          this.state.users.map((user, userID) => (
+            <Contacts
               key={userID}
               id={user.id}
-              username={user.username} 
+              username={user.username}
               lastLogin={user.lastLogin}
               description={user.description}
               avatar={user.avatar}

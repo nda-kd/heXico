@@ -68,10 +68,15 @@ class Profile extends Component {
     this.props.history.push("./messenger")
   }
 
+  editUsernameHandle = (e)=>{
+    this.setState({admin: { ...this.state.admin, username: e.target.value }})
+    this.setState({edit: false})
+  }
+
   editKeyPress = (e)=>{
     if(e.key === 'Enter'){
-      this.setState({admin: { ...this.state.admin, username: e.target.value }})
-      this.setState({edit: false})
+      this.editUsernameHandle(e)
+      
     }
     
   }
@@ -127,9 +132,8 @@ class Profile extends Component {
               : <input 
               className='edit-input' 
               placeholder={this.state.admin.username}
-              // onChange={this.onChangeHandle}
               onKeyPress={this.editKeyPress}
-              onBlur={this.editKeyPress}
+              onBlur={this.editUsernameHandle}
                />
              }
               <EditRoundedIcon onClick={()=> this.setState({edit: true})} 

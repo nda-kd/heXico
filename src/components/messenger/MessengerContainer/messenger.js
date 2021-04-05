@@ -10,8 +10,8 @@ class Messenger extends React.Component {
   render () {
     return (
       <div className='Conversation-page-wrap'>
-        <div className="ContactList-wrap">
-        <ContactList />
+        <div className='ContactList-wrap'>
+          <ContactList />
         </div>
         <div className='chat-send-profile-status-wrap'>
           <Staus />
@@ -28,6 +28,5 @@ class Messenger extends React.Component {
     )
   }
 }
-
 
 export default Messenger
