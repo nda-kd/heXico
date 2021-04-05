@@ -12,6 +12,7 @@ This project is a chat web application template with validated login and sign-up
 * Chat page
 * Profile 
 
+#### To test the demo
 ``` 
 Email: admin@gmail.com 
 Password: 12345678
