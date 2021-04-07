@@ -1,10 +1,10 @@
 # Project: heXico
 
-This project is a chat web application template with validated login and sign-up page, ability to write message on Screen and navigate through pages.
+This project is a chat web application with static user, validated login and sign-up page, ability to send messages for each user and navigate through pages and set up your profile once your in your account.
 
 #### Technologies include:
 
-* Html-css, React, ES6, Redux, Scss, React-router-dom, Material-ui-react
+* Html-css, React, ES6, Redux, Scss, React-router-dom, Material-ui-react, react-emoji-picker
 
 ## Pages:
 * [Login](https://nda-kd.github.io/heXico/#/) 
