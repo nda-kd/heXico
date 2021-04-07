@@ -7,7 +7,7 @@ This project is a chat web application with static user, validated login and sig
 * Html-css, React, ES6, Redux, Scss, React-router-dom, Material-ui-react, react-emoji-picker
 
 ## Pages:
-* [Login](https://nda-kd.github.io/heXico/#/) <br/><br/>
+* [Login](https://nda-kd.github.io/heXico/#/) <br/>
  <img src="https://user-images.githubusercontent.com/65509739/113914427-c8b33680-97f2-11eb-87bf-0af8a8cae18e.png" width="35%"></img>
 * [Sign-up](https://nda-kd.github.io/heXico/#/Signup) <br/>
  <img src="https://user-images.githubusercontent.com/65509739/113914540-e7193200-97f2-11eb-9222-5bc4501800a6.png" width="35%"></img>
