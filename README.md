@@ -12,10 +12,10 @@ This project is a chat web application with static user, validated login and sig
 * Chat
 * Profile 
 
-<img src="https://user-images.githubusercontent.com/65509739/113912938-f7c8a880-97f0-11eb-9083-14c4282e82e4.png" width="45%"></img>
-<img src="https://user-images.githubusercontent.com/65509739/113913164-3e1e0780-97f1-11eb-8123-0a17bdee21ba.png" width="45%"></img>
-<img src="https://user-images.githubusercontent.com/65509739/113913529-aec52400-97f1-11eb-9a9e-4f0141e1d9fa.png" width="45%"></img>
-<img src="https://user-images.githubusercontent.com/65509739/113913772-f21f9280-97f1-11eb-85f1-3915b5f2960b.png" width="45%"></img>
+<img src="https://user-images.githubusercontent.com/65509739/113914427-c8b33680-97f2-11eb-87bf-0af8a8cae18e.png" width="40%"></img>
+<img src="https://user-images.githubusercontent.com/65509739/113914540-e7193200-97f2-11eb-9222-5bc4501800a6.png" width="40%"></img>
+<img src="https://user-images.githubusercontent.com/65509739/113913529-aec52400-97f1-11eb-9a9e-4f0141e1d9fa.png" width="40%"></img>
+<img src="https://user-images.githubusercontent.com/65509739/113913772-f21f9280-97f1-11eb-85f1-3915b5f2960b.png" width="40%"></img>
 
 
 #### To test the demo
