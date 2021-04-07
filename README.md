@@ -6,10 +6,10 @@ This project is a chat web application template with validated login and sign-up
 
 * Html-css, React, ES6, Redux, Scss, React-router-dom, Material-ui-react
 
-## features:
-* [Login page](https://nda-kd.github.io/heXico/#/) 
-* [Sign-up page](https://nda-kd.github.io/heXico/#/Signup) 
-* Chat page
+## Pages:
+* [Login](https://nda-kd.github.io/heXico/#/) 
+* [Sign-up](https://nda-kd.github.io/heXico/#/Signup) 
+* Chat
 * Profile 
 
 #### To test the demo
