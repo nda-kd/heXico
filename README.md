@@ -12,7 +12,7 @@ This project is a chat web application with static user, validated login and sig
 * Chat
 * Profile 
 
-![image](https://user-images.githubusercontent.com/65509739/113912938-f7c8a880-97f0-11eb-9083-14c4282e82e4.png)
+<img src="https://user-images.githubusercontent.com/65509739/113912938-f7c8a880-97f0-11eb-9083-14c4282e82e4.png" width="300" height="360">
 
 
 #### To test the demo
