@@ -1,18 +1,27 @@
 # Project: heXico
 
-This project is a chat web application template with validated login and sign-up page, ability to write message on Screen and navigate through pages.
+This project is a chat web application with static user, validated login and sign-up page, ability to send messages for each user and navigate through pages and set up your profile once your in your account.
 
 #### Technologies include:
 
-* Html-css, React, ES6, Redux, Scss, React-router-dom, Material-ui-react
+* Html-css, React, ES6, Redux, Scss, React-router-dom, Material-ui-react, react-emoji-picker
 
-## features:
-* [Login page](https://nda-kd.github.io/heXico/#/) 
-* [Sign-up page](https://nda-kd.github.io/heXico/#/Signup) 
-* [Chat page](https://nda-kd.github.io/heXico/#/messenger) 
-* [Profile](https://nda-kd.github.io/heXico/#/profile) 
+## Pages:
+* [Login](https://nda-kd.github.io/heXico/#/) 
+* [Sign-up](https://nda-kd.github.io/heXico/#/Signup) 
+* Chat 
+* Profile
 
- 
+<img src="https://user-images.githubusercontent.com/65509739/113917418-6f4d0680-97f6-11eb-81f3-cf42b5a28df3.png" width="20%"></img>
+<img src="https://user-images.githubusercontent.com/65509739/113916143-e08bba00-97f4-11eb-873a-e69a4ebe07ff.png" width="20%"></img><br/>
+<img src="https://user-images.githubusercontent.com/65509739/113913529-aec52400-97f1-11eb-9a9e-4f0141e1d9fa.png" width="20%"></img>
+<img src="https://user-images.githubusercontent.com/65509739/113913772-f21f9280-97f1-11eb-85f1-3915b5f2960b.png" width="20%"></img>
+
+#### To test the demo
+``` 
+Email: admin@gmail.com 
+Password: 12345678
+```
  
 <!-- <img src="Docs/carts.gif" width="300" height="360"> -->
 
