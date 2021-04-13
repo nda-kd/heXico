@@ -2,78 +2,125 @@
 
 
 .login-page-wrap{
-    @extend %flex-display;
-    margin: 0;
-    margin-left: 0;
-    margin-right: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
     font-family: 'Baloo Tamma 2';
     font-style: normal;
+    @media screen and (max-width: 850px) {
+        flex-direction: column;
+    }
 }
 
+
+
 .login-signup-wrap{
-    @extend %flex-display;
+    display: flex;
     flex-direction: column ; 
     justify-content: center ;
     flex-grow: 1;
-    height: 100vh ;
+    height: 100% ;
     position: relative;
     background-color: $primary-blue;
+    @media screen and (max-width: 850px) {
+        height: 30%;
+    }
 }
 
 .login-signup-part{
-    @extend %flex-display;
+    display: flex;
     flex-direction: column;
     flex-grow: 1;
-    border-radius: 10% 0 0 10% ;
+    border-radius: 50px 0 0 50px ;
     position: absolute;
-    height: 47em ;
+    height: 78.5% ; 
+    width: 67%;
     right: 0;
-    left: 20em;
     background-color: $grey;
-    div{
-        @extend %flex-display;
+    @media screen and (max-width: 850px) {
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        align-self: flex-start;
-        margin: 5em 4.5em;
+        border-radius: 50px 0 0 50px ;
+        width: 90%;
+    }
+    div{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 12.5% 10% 10% 10%;
+        @media screen and (max-width: 850px) {
+            width: 70%;
+            height: 50%;
+            margin: 7% 7% 5% 28%;
+            button{
+                border: 1px;
+                height: 60%;
+                width: 30%;
+                padding: 3%;
+                left: 0;
+            }
+            span{
+                font-size: 67%;
+            }
+        }
     }
     img{
         justify-self: center;
+        width: auto ;
+        height: 70% ;
+        @media screen and (max-width: 850px) {
+            left: 5%;
+            right: 0;
+            position: absolute;
+        }
     }
 }
 
-.login-login-wrap{
-    @extend %flex-display;
+.login-login-wrap{ 
+    display: flex;
     flex-direction: column ; 
     justify-content: center ;
     flex-grow: 1;
-    height: 100vh ;   
+    height: 100% ;   
     position: relative;
     background-color: $grey;
 }
 
 .login-login-part{
-    @extend %flex-display;
+    display: flex;
     flex-direction: column;
     flex-grow: 1;
-    border-radius:0 10% 10% 0;
+    border-radius:0 50px 50px 0;
     position: absolute;
-    height: 47em ;
-    right: 20em;
+    height: 78.5% ;
+    width: 67%;
     left: 0;
     background-color: $white;
+    @media screen and (max-width: 850px) {
+        width: 85%;
+    }
 }
 
 .login-contents{
-    @extend %flex-display;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 35em;
-    margin: 5em 4.5em;
+    height: 78%;
+    margin: 10% 10%;
+    @media screen and  (max-width: 850px) {
+        margin: 7% 10%;
+        h1{
+            font-size: 30px  !important;
+        }
+        p{
+            font-size: 12px  !important;
+        }
+    }
     a{
         text-align: left;
     }
-} 
+}  
 
 .login-title-wrap{
     @extend %flex-display;
@@ -102,7 +149,16 @@
 .input-error{
     display: flex;
     flex-direction: column;
-    margin: 1em 0em 1em 0em;
+    margin: 1% 0em 1%0em;
+    @media screen and (max-width: 850px) {
+        margin: 1% 0em 1% 0em;
+        flex-wrap: wrap;
+        p{
+            margin: 0px;
+            font-size: .5em;
+            color: red;
+        }
+    }
     input{
       text-align: left;
       height: 1.5vh;
@@ -117,8 +173,12 @@
 }
 
 .login-submit{
-    @extend %flex-display;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding-right: 4em;
+    @media screen and (max-width: 850px) {
+        padding: 12% 0 3.2% 0;
+
+    }
 }
