@@ -1,3 +1,9 @@
+@font-face{
+  font-family: 'Baloo Tamma 2';
+  font-style: normal;
+  src: local('Baloo Tamma 2'), url(../styles/Fonts/BalooTamma2-Regular.ttf) format('truetype')
+}
 .App {
   font-family: 'Baloo Tamma 2';
+  font-style: normal;
 }
