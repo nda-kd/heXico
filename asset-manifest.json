@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/heXico/static/css/main.a5d39d63.chunk.css",
-    "main.js": "/heXico/static/js/main.9c331398.chunk.js",
-    "main.js.map": "/heXico/static/js/main.9c331398.chunk.js.map",
+    "main.css": "/heXico/static/css/main.4997b005.chunk.css",
+    "main.js": "/heXico/static/js/main.695ca311.chunk.js",
+    "main.js.map": "/heXico/static/js/main.695ca311.chunk.js.map",
     "runtime-main.js": "/heXico/static/js/runtime-main.e0acc692.js",
     "runtime-main.js.map": "/heXico/static/js/runtime-main.e0acc692.js.map",
     "static/js/2.6846bceb.chunk.js": "/heXico/static/js/2.6846bceb.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.95129edb.chunk.js": "/heXico/static/js/3.95129edb.chunk.js",
     "static/js/3.95129edb.chunk.js.map": "/heXico/static/js/3.95129edb.chunk.js.map",
     "index.html": "/heXico/index.html",
-    "static/css/main.a5d39d63.chunk.css.map": "/heXico/static/css/main.a5d39d63.chunk.css.map",
+    "static/css/main.4997b005.chunk.css.map": "/heXico/static/css/main.4997b005.chunk.css.map",
     "static/js/2.6846bceb.chunk.js.LICENSE.txt": "/heXico/static/js/2.6846bceb.chunk.js.LICENSE.txt",
     "static/media/messenger.scss": "/heXico/static/media/BalooTamma2-Regular.51bbfac1.ttf",
     "static/media/Login-image.41f8fcac.svg": "/heXico/static/media/Login-image.41f8fcac.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.e0acc692.js",
     "static/js/2.6846bceb.chunk.js",
-    "static/css/main.a5d39d63.chunk.css",
-    "static/js/main.9c331398.chunk.js"
+    "static/css/main.4997b005.chunk.css",
+    "static/js/main.695ca311.chunk.js"
   ]
 }
