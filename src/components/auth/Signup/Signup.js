@@ -137,12 +137,12 @@ class Signup extends Component {
                     value={this.state.fields.repeatedPassword}
                     onChange={(e) => this.handleChange(e)}
                     onBlur={(e) => this.confirmPasswordValidation(e)}
-                  />  
+                  />
                 </div>
                 <div className='password-errors-wrap'>
-                    <p>{this.state.errors.password}</p>
-                    <p>{this.state.errors.repeatedPassword}</p>
-                  </div>
+                  <p>{this.state.errors.password}</p>
+                  <p>{this.state.errors.repeatedPassword}</p>
+                </div>
                 <div className='email-input'>
                   <TextField
                     variant='outlined'

@@ -12,14 +12,14 @@
 }
 
 .mymessage-wrap{
-    @extend %flex-display;
+    display: flex;
     justify-content: flex-end;
     margin-top: 5px;
     margin-bottom: 10px;
 }
 
 .mymessage{
-    @extend %flex-display;
+    display: flex;
     align-content: center;
     background-color:$primary-blue ;
     color: black;

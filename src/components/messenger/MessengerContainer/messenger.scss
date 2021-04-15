@@ -12,7 +12,7 @@ body{
 }
   
 .chat-send-profile-status-wrap{
-    @extend %flex-display;
+    display: flex;
     flex-direction: column;
     flex-grow: 2;
     padding: 0em;
@@ -20,20 +20,20 @@ body{
 }
 
 .chat-send-profile-wrap{
-    @extend %flex-display;
+    display: flex;
     flex-grow: 3;
     background-color: brown;
 }
 
 .chat-send-wrap{
-    @extend %flex-display;
+    display: flex;
     flex-direction: column;
     flex-grow: 3;
      background-color: cyan; 
 }
 
 .ContactList-wrap{
-    @extend %flex-display;
+    display: flex;
     flex-direction: column;
     flex-grow: .22;
     height: 100vh;

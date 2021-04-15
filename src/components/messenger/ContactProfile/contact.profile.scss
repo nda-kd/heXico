@@ -2,7 +2,7 @@
 
 
 .contact-profile-wrap{
-    @extend %flex-display;
+    display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: .6;
@@ -10,7 +10,7 @@
 }
 
 .contacts-profile{
-    @extend %flex-display;
+    display: flex;
     flex-direction: column;
     width: 16.5em;
     height: 23em;
@@ -23,7 +23,6 @@
       width: 18em;
       height: 7em;
       overflow-x: hidden;
-      // margin-top: .2em;
     }
     //user name
     h2{
@@ -41,7 +40,6 @@
 
 .contact-profile-menu-wrap{
     display: flex;
-    
     justify-content: space-evenly;
     height: 2.5em;
 }

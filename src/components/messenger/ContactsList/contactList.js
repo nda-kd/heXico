@@ -15,13 +15,17 @@ class ContactList extends React.Component {
   }
 
   render () {
-    console.log('USERS', this.state.users)
+    console.log('USERS', this.state.searchField)
     return (
       <div className='contacts-me-search-wraps'>
         <Me />
         <div className='contacts-search-wrap'>
           <img src={searchIcon} alt='Search Icon' />
-          <input type='text' name='search' placeholder='Search...' />
+          <input
+            type='text'
+            name='search'
+            placeholder='Search...'
+          />
         </div>
         <div className='contact-lists'>
           {

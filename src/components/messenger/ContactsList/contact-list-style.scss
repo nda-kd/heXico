@@ -1,7 +1,7 @@
 @import "../../../styles/general.scss";
 
 .contacts-me-search-wraps{
-    @extend %flex-display;
+    display: flex;
     flex-direction: column;
     flex-grow: .1;
     height: 100vh;
@@ -9,7 +9,7 @@
 }
 
 .contacts-search-wrap{
-    @extend %flex-display;
+    display: flex;
     padding: 1em 0em 2.5em 3em;
     background-color: $grey;
     //search icon
@@ -28,12 +28,11 @@
 }
 
 .contact-lists{
-    @extend %flex-display;
+    display: flex;
     flex-direction: column;
     flex-grow: 6;
     margin: 0em 3em 8.5em 3em;
     background-color: $white;
     width: 81%;
     overflow: auto;
-    // background-color: rgb(241, 15, 15);
 }
