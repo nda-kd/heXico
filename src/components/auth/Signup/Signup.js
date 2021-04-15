@@ -137,12 +137,12 @@ class Signup extends Component {
                     value={this.state.fields.repeatedPassword}
                     onChange={(e) => this.handleChange(e)}
                     onBlur={(e) => this.confirmPasswordValidation(e)}
-                  />
-                  <div className='password-errors-wrap'>
+                  />  
+                </div>
+                <div className='password-errors-wrap'>
                     <p>{this.state.errors.password}</p>
                     <p>{this.state.errors.repeatedPassword}</p>
                   </div>
-                </div>
                 <div className='email-input'>
                   <TextField
                     variant='outlined'
@@ -152,8 +152,8 @@ class Signup extends Component {
                     onChange={(e) => this.handleChange(e)}
                     onBlur={(e) => this.handleValidation(e)}
                   />
-                  <p className='email-p'>{this.state.errors.email}</p>
                 </div>
+                <p className='email-p'>{this.state.errors.email}</p>
               </div>
               <div className='signup-submit'>
                 <p>By clicking Sign up, you agree to abide by <Link to='www.'>heXico's Terms and Conditions.</Link> </p>

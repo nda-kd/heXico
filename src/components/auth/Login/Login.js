@@ -156,7 +156,7 @@ class Login extends Component {
                   Login
                 </Button>
               </div>
-              <Link to='/'>Forgot your password?</Link>
+              <Link to='/' id='forget-pass'>Forgot your password?</Link>
             </div>
           </div>
         </div>

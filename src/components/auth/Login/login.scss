@@ -5,8 +5,6 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    font-family: 'Baloo Tamma 2';
-    font-style: normal;
     @media screen and (max-width: 850px) {
         flex-direction: column;
     }
@@ -23,7 +21,7 @@
     position: relative;
     background-color: $primary-blue;
     @media screen and (max-width: 850px) {
-        height: 30%;
+        height: 28%;
     }
 }
 
@@ -98,7 +96,8 @@
     left: 0;
     background-color: $white;
     @media screen and (max-width: 850px) {
-        width: 85%;
+        width: 90%;
+        height: 90%;
     }
 }
 
@@ -108,6 +107,9 @@
     justify-content: space-between;
     height: 78%;
     margin: 10% 10%;
+    a{
+        text-align: left;
+    }
     @media screen and  (max-width: 850px) {
         margin: 7% 10%;
         h1{
@@ -117,13 +119,10 @@
             font-size: 12px  !important;
         }
     }
-    a{
-        text-align: left;
-    }
 }  
 
 .login-title-wrap{
-    @extend %flex-display;
+    display: flex;
     flex-direction: column;
     text-align: left;
     margin-bottom: 1em;
@@ -137,12 +136,22 @@
         margin: 0em;
         color: $darker-grey;
      }  
+     @media screen and (max-width: 850px) {
+        margin-bottom: 0;
+        h1{
+            font-size: 27px  !important;
+        }
+        p{
+            font-size: 10px  !important;
+        }
+    }
 }
 
 .login-input-wrap{
-    @extend %flex-display;
+   display: flex;
    flex-direction: column;
    align-items: flex-start;
+   width: 100%;
    height: 23vh;
 }
 
@@ -156,7 +165,6 @@
         p{
             margin: 0px;
             font-size: .5em;
-            color: red;
         }
     }
     input{
@@ -167,7 +175,6 @@
     p{
         margin: 0px;
         font-size: .89em;
-        // height: 2vh;
         color: red;
     }
 }
@@ -176,9 +183,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 4em;
+    margin-right: 95%;
+    width: 88%;
     @media screen and (max-width: 850px) {
         padding: 12% 0 3.2% 0;
+        button{
+            width:  fit-content;
+            height:  fit-content;
+            font-size: 60% ;
+            margin-right: 20%;
+        }
+        span{
+            display: flex;
+            font-size: 90% ;
+            align-items: center;
+            label{
+                padding-top: 3.5px;
+                font-size: 68%;
+            }
+        }
+    }
+}
 
+#forget-pass{
+    @media screen and (max-width: 850px) {
+        font-size: 70%;
     }
 }

@@ -3,6 +3,7 @@
 ------------------------------------*/ 
 @font-face{
     font-family: 'Baloo Tamma 2';
+    font-style: normal;
     src: local('Baloo Tamma 2'), url(./Fonts/BalooTamma2-Regular.ttf) format('truetype')
   }
 /*------------------------------------
@@ -18,5 +19,5 @@ $darker-grey: rgb(80, 77, 77);
 ------------------------------------*/ 
 %flex-display {
     display: flex;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
   } 
