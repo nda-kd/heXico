@@ -7,19 +7,15 @@
     margin: 0em;
     padding-left: .8em;
     width: 80%;
-    // background-color: violet;
     div{
       display: flex;
-      // background-color: red;
     }
     //setting icon
     .setting-icon{
       cursor: pointer;
       margin: 3.6em 0em 0em 3.5em;
-      // padding-left: 4em ;
       width: 1.2em;
       height: 1.2em;
-      // background-color: rgb(63, 62, 62);
     }
 }
 
@@ -37,8 +33,10 @@
     //user name
     h2{
       margin: 0em;
-      margin-top: .15em;
-      text-align:left
+      text-align:left;
+      max-width: 9em;
+      height: 1.8em;
+      overflow: auto;
     }
     //about
     p{

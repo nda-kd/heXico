@@ -37,7 +37,7 @@ class SendMessage extends Component {
       this.setState({
         newMessage: { ...this.state.newMessage, message: "" },
       });
-      alert("Please chosse a user to start a chat ");
+      alert("Please choose a user to start a chat ");
       return;
     } else if (
       (this.state.newMessage.message.length === 0 ||

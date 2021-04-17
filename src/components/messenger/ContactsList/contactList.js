@@ -10,12 +10,12 @@ class ContactList extends React.Component {
     super();
 
     this.state = {
-      users: USERS,
+      users: USERS
     };
   }
 
   render() {
-    console.log("USERS", this.state.searchField);
+    console.log("USERS", this.state.users);
     return (
       <div className="contacts-me-search-wraps">
         <Me />
