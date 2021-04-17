@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/heXico/static/css/main.9fff46b6.chunk.css",
-    "main.js": "/heXico/static/js/main.9789ccd3.chunk.js",
-    "main.js.map": "/heXico/static/js/main.9789ccd3.chunk.js.map",
-    "runtime-main.js": "/heXico/static/js/runtime-main.e0acc692.js",
-    "runtime-main.js.map": "/heXico/static/js/runtime-main.e0acc692.js.map",
-    "static/js/2.6846bceb.chunk.js": "/heXico/static/js/2.6846bceb.chunk.js",
-    "static/js/2.6846bceb.chunk.js.map": "/heXico/static/js/2.6846bceb.chunk.js.map",
-    "static/js/3.95129edb.chunk.js": "/heXico/static/js/3.95129edb.chunk.js",
-    "static/js/3.95129edb.chunk.js.map": "/heXico/static/js/3.95129edb.chunk.js.map",
+    "main.css": "/heXico/static/css/main.091fb086.chunk.css",
+    "main.js": "/heXico/static/js/main.9b6d456c.chunk.js",
+    "main.js.map": "/heXico/static/js/main.9b6d456c.chunk.js.map",
+    "runtime-main.js": "/heXico/static/js/runtime-main.8e9cb21f.js",
+    "runtime-main.js.map": "/heXico/static/js/runtime-main.8e9cb21f.js.map",
+    "static/js/2.12a63976.chunk.js": "/heXico/static/js/2.12a63976.chunk.js",
+    "static/js/2.12a63976.chunk.js.map": "/heXico/static/js/2.12a63976.chunk.js.map",
+    "static/js/3.1e74a598.chunk.js": "/heXico/static/js/3.1e74a598.chunk.js",
+    "static/js/3.1e74a598.chunk.js.map": "/heXico/static/js/3.1e74a598.chunk.js.map",
     "index.html": "/heXico/index.html",
-    "static/css/main.9fff46b6.chunk.css.map": "/heXico/static/css/main.9fff46b6.chunk.css.map",
-    "static/js/2.6846bceb.chunk.js.LICENSE.txt": "/heXico/static/js/2.6846bceb.chunk.js.LICENSE.txt",
+    "static/css/main.091fb086.chunk.css.map": "/heXico/static/css/main.091fb086.chunk.css.map",
+    "static/js/2.12a63976.chunk.js.LICENSE.txt": "/heXico/static/js/2.12a63976.chunk.js.LICENSE.txt",
     "static/media/App.css": "/heXico/static/media/BalooTamma2-Regular.51bbfac1.ttf",
     "static/media/Login-image.41f8fcac.svg": "/heXico/static/media/Login-image.41f8fcac.svg",
     "static/media/SEND.520967de.svg": "/heXico/static/media/SEND.520967de.svg",
@@ -19,9 +19,9 @@
     "static/media/setting.25040a72.png": "/heXico/static/media/setting.25040a72.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e0acc692.js",
-    "static/js/2.6846bceb.chunk.js",
-    "static/css/main.9fff46b6.chunk.css",
-    "static/js/main.9789ccd3.chunk.js"
+    "static/js/runtime-main.8e9cb21f.js",
+    "static/js/2.12a63976.chunk.js",
+    "static/css/main.091fb086.chunk.css",
+    "static/js/main.9b6d456c.chunk.js"
   ]
 }
