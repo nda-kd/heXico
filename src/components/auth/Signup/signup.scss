@@ -1,249 +1,246 @@
 @import "../../../styles/general.scss";
 
-
-.signup-page-wrap{
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    @media screen and (max-width: 850px) {
-        flex-direction: column;
-    }
-}
-
-.signup-signup-wrap{
-    display: flex;
-    flex-direction: column ; 
-    justify-content: center ;
-    flex-grow: 1;
-    height: 100% ;
-    position: relative;
-    background-color: $grey;
-}
-
-.signup-signup-part{
-    display: flex;
+.signup-page-wrap {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  @media screen and (max-width: 850px) {
     flex-direction: column;
-    flex-grow: 1;
-    border-radius: 50px 0 0 50px ;
-    position: absolute;
-    height: 78.5%;
-    width: 67%;
-    right: 0;
-    background-color: $white;
-    @media screen and (max-width: 850px) {
-        width: 90%;
-        height: 90%;
-    }
+  }
 }
 
-.signup-login-wrap{
-    display: flex;
-    flex-direction: column ; 
-    justify-content: center ;
-    flex-grow: 1;
-    height: 100vh ;   
-    position: relative;
-    background-color: $primary-blue;
-    @media screen and (max-width: 850px) {
-        height: 28%;
-    }
+.signup-signup-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  height: 100%;
+  position: relative;
+  background-color: $grey;
 }
 
-.signup-login-part{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    border-radius:0 50px 50px 0;
-    position: absolute;
-    height: 78.5% ; 
-    width: 67%;
-    left: 0;
-    background-color: $grey;
-    @media screen and (max-width: 850px) {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0 50px 50px 0  ;
-        width: 90%;
-    }
-    div{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin: 12.5% 10% 10% 10%;
-        @media screen and (max-width: 850px) {
-            width: 70%;
-            height: 50%;
-            margin: 7% 7% 5% 28%;
-            button{
-                border: 1px;
-                height: 60%;
-                width: 30%;
-                padding: 3%;
-                left: 0;
-            }
-            span{
-                font-size: 67%;
-            }
-        }
-    }
-    img{
-        justify-self: center;
-        width: auto ;
-        height: 70% ;
-        @media screen and (max-width: 850px) {
-            left: 5%;
-            right: 0;
-            position: absolute;
-        }
-    }
+.signup-signup-part {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-radius: 50px 0 0 50px;
+  position: absolute;
+  height: 78.5%;
+  width: 67%;
+  right: 0;
+  background-color: $white;
+  @media screen and (max-width: 850px) {
+    width: 90%;
+    height: 90%;
+  }
 }
 
-.signup-contents{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 78%;
-    margin: 8.5% 10%;
-    @media screen and (max-width: 850px) {
-        height: 100%;
-    }
+.signup-login-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  height: 100vh;
+  position: relative;
+  background-color: $primary-blue;
+  @media screen and (max-width: 850px) {
+    height: 28%;
+  }
 }
 
-.signup-title-wrap{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-bottom: 1em;
-    h1{
-        font-size: 2.3em;
-        margin: 0em;
-        height: 1.3em;
-    }
-    p{
-        font-size: 1em;
-        margin: 0em;
-        color: $darker-grey;
-     } 
-    @media screen and (max-width: 850px) {
-        margin-bottom: 0;
-        h1{
-            font-size: 27px  !important;
-        }
-        p{
-            font-size: 10px  !important;
-        }
-    } 
-}
-
-.signup-input-wrap{
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   height: fit-content;
-   @media screen and (max-width: 850px) {
-    height: fit-content;
-   }
-}
-
-.two-input-wrap{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 1.5em;
-    input{
-        text-align: left;
-        height: 1.5vh;
-        width: 13.6em;
-        margin: 0 10px 0 0;
-    }
-    @media screen and (max-width: 850px) {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-top: 1px;
-        height: fit-content;
-        margin: 0px;
-        input{
-            width: 100vw;
-            }
-    }
-}
-
-
-.email-p{
-        margin: 0px;
-        font-size: .89em;
-        color: red;
-        @media screen and (max-width: 850px) {
-            font-size: 67%;
-        }
-}
-
-.email-input{
-    display: flex;
-    width: 100%;
-    margin-top: 1.5em;
-    input{
-        text-align: left;
-        width: 30.4em;
-    }
-    @media screen and (max-width: 850px) {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-top: 1px;
-        height: fit-content;
-        margin: 0px;
-        input{
-            width: 100vw;
-            }
-    }
-}
-
-.password-errors-wrap{
+.signup-login-part {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-radius: 0 50px 50px 0;
+  position: absolute;
+  height: 78.5%;
+  width: 67%;
+  left: 0;
+  background-color: $grey;
+  @media screen and (max-width: 850px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 50px 50px 0;
+    width: 90%;
+  }
+  div {
     display: flex;
     justify-content: flex-start;
-    width: 100%;
-    p{
-        margin: 0px;
-        font-size: .89em;
-        color: red;
-        margin-right: 15px;
-    }
+    align-items: center;
+    margin: 12.5% 10% 10% 10%;
     @media screen and (max-width: 850px) {
+      width: 70%;
+      height: 50%;
+      margin: 7% 7% 5% 28%;
+      button {
+        border: 1px;
+        height: 60%;
+        width: 30%;
+        padding: 3%;
+        left: 0;
+      }
+      span {
         font-size: 67%;
-        p{
-            line-height: 100%;
-        }
+      }
     }
+  }
+  img {
+    justify-self: center;
+    width: auto;
+    height: 70%;
+    @media screen and (max-width: 850px) {
+      left: 5%;
+      right: 0;
+      position: absolute;
+    }
+  }
 }
 
-.signup-submit{
-    @extend %flex-display;
-    align-items: center;
-    width: 60%;
+.signup-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 78%;
+  margin: 8.5% 10%;
+  @media screen and (max-width: 850px) {
+    height: 100%;
+  }
+}
+
+.signup-title-wrap {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1em;
+  h1 {
+    font-size: 2.3em;
+    margin: 0em;
+    height: 1.3em;
+  }
+  p {
+    font-size: 1em;
+    margin: 0em;
+    color: $darker-grey;
+  }
+  @media screen and (max-width: 850px) {
+    margin-bottom: 0;
+    h1 {
+      font-size: 27px !important;
+    }
+    p {
+      font-size: 10px !important;
+    }
+  }
+}
+
+.signup-input-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: fit-content;
+  @media screen and (max-width: 850px) {
+    height: fit-content;
+  }
+}
+
+.two-input-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1.5em;
+  input {
     text-align: left;
-    margin-top: 1em;
-    p{
-        
-        height: fit-content;
-        text-align: left;
+    height: 1.5vh;
+    width: 13.6em;
+    margin: 0 10px 0 0;
+  }
+  @media screen and (max-width: 850px) {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 1px;
+    height: fit-content;
+    margin: 0px;
+    input {
+      width: 100vw;
     }
-    @media screen and (max-width: 850px) {
-        padding: 0;
-        width: 100%;
-        height: fit-content;
-        margin: 0;
-        button{
-            align-self: center;
-            width:  fit-content;
-            height:  fit-content;
-            font-size: 50% ;
-            padding: 1em;
-        }
-        p{
-            font-size: 65% ;
-            margin: 0 .5em 0 0 ;
-            line-height: 100%;
-        }
+  }
+}
+
+.email-p {
+  margin: 0px;
+  font-size: 0.89em;
+  color: red;
+  @media screen and (max-width: 850px) {
+    font-size: 67%;
+  }
+}
+
+.email-input {
+  display: flex;
+  width: 100%;
+  margin-top: 1.5em;
+  input {
+    text-align: left;
+    width: 30.4em;
+  }
+  @media screen and (max-width: 850px) {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 1px;
+    height: fit-content;
+    margin: 0px;
+    input {
+      width: 100vw;
     }
+  }
+}
+
+.password-errors-wrap {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  p {
+    margin: 0px;
+    font-size: 0.89em;
+    color: red;
+    margin-right: 15px;
+  }
+  @media screen and (max-width: 850px) {
+    font-size: 67%;
+    p {
+      line-height: 100%;
+    }
+  }
+}
+
+.signup-submit {
+  @extend %flex-display;
+  align-items: center;
+  width: 60%;
+  text-align: left;
+  margin-top: 1em;
+  p {
+    height: fit-content;
+    text-align: left;
+  }
+  @media screen and (max-width: 850px) {
+    padding: 0;
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    button {
+      align-self: center;
+      width: fit-content;
+      height: fit-content;
+      font-size: 50%;
+      padding: 1em;
+    }
+    p {
+      font-size: 65%;
+      margin: 0 0.5em 0 0;
+      line-height: 100%;
+    }
+  }
 }

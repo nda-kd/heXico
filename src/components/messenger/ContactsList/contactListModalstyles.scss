@@ -1,0 +1,26 @@
+.menu-wrap {
+  display: flex;
+}
+
+.div-button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: right;
+  color: white;
+  width: fit-content;
+  height: 35px;
+  padding-left: 5px;
+  background-color: #0ac5e6f1;
+  cursor: pointer;
+  span {
+    margin: 2px 10px 0 5px;
+  }
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}

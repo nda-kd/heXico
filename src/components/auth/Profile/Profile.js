@@ -121,7 +121,7 @@ class Profile extends Component {
                   </div>
                 }
               >
-                <MyAvatar alt="My Avatar" src={this.state.imageUrl} >
+                <MyAvatar alt="My Avatar" src={this.state.imageUrl}>
                   A
                 </MyAvatar>
               </Badge>
@@ -169,41 +169,41 @@ class Profile extends Component {
             <div className="info-changes">
               <div className="forms">
                 <div className="profile-input-wrap">
-                      <EmailSharpIcon />
-                      <TextField
-                        id="input-with-icon-grid1"
-                        label="Email"
-                        name="email"
-                        onChange={this.onChangeHandle}
-                      />
+                  <EmailSharpIcon />
+                  <TextField
+                    id="input-with-icon-grid1"
+                    label="Email"
+                    name="email"
+                    onChange={this.onChangeHandle}
+                  />
                 </div>
                 <div className="profile-input-wrap">
-                      <CallEndSharpIcon />
-                      <TextField
-                        id="input-with-icon-grid2"
-                        label="Number"
-                        name="number"
-                        onChange={this.onChangeHandle}
-                      />
+                  <CallEndSharpIcon />
+                  <TextField
+                    id="input-with-icon-grid2"
+                    label="Number"
+                    name="number"
+                    onChange={this.onChangeHandle}
+                  />
                 </div>
                 <div className="profile-input-wrap">
-                      <VpnKeySharpIcon />
-                      <TextField
-                        type="password"
-                        id="input-with-icon-grid3"
-                        label="Password"
-                        name="password"
-                        onChange={this.onChangeHandle}
-                      />
+                  <VpnKeySharpIcon />
+                  <TextField
+                    type="password"
+                    id="input-with-icon-grid3"
+                    label="Password"
+                    name="password"
+                    onChange={this.onChangeHandle}
+                  />
                 </div>
                 <div className="profile-input-wrap">
-                      <InfoSharpIcon />
-                      <TextField
-                        id="input-with-icon-grid4"
-                        label="About"
-                        name="description"
-                        onChange={this.onChangeHandle}
-                      />
+                  <InfoSharpIcon />
+                  <TextField
+                    id="input-with-icon-grid4"
+                    label="About"
+                    name="description"
+                    onChange={this.onChangeHandle}
+                  />
                 </div>
               </div>
               <div className="buttons-wrap">
